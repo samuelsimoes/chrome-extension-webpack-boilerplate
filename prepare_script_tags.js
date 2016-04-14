@@ -14,13 +14,13 @@ var appendLocalhost = function (content) {
   content =
     content.replace(
       new RegExp("(<script data-bundle src=['|\"])", "g"),
-      ("$1http://localhost:" + env.port + "/")
+      ("$1http://localhost:" + env.PORT + "/")
     );
 
   content =
     content.replace(
       /(<\/body>)/,
-      "<script src=\"http://localhost:" + env.port + "/webpack-dev-server.js\"></script>$1"
+      "<script src=\"http://localhost:" + env.PORT + "/webpack-dev-server.js\"></script>$1"
     );
 
   return content;

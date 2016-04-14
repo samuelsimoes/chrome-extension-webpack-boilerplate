@@ -6,7 +6,7 @@ var webpack = require("webpack"),
 // load the secrets
 var alias = {};
 
-var secretsPath = path.join(__dirname, ("secrets." + env.mode + ".js"));
+var secretsPath = path.join(__dirname, ("secrets." + env.NODE_ENV + ".js"));
 
 if (fileSystem.existsSync(secretsPath)) {
   alias["secrets"] = secretsPath;

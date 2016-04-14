@@ -7,9 +7,9 @@ var manifest = require("./src/manifest.json"),
 manifest.description = process.env.npm_package_description;
 manifest.version = process.env.npm_package_version;
 
-if (env.mode === "development") {
+if (env.NODE_ENV === "development") {
   manifest.content_security_policy =
-    manifest.content_security_policy.replace("%PORT%", env.port);
+    manifest.content_security_policy.replace("%PORT%", env.PORT);
 } else {
   manifest.content_security_policy =
     manifest.content_security_policy.replace("http://localhost:%PORT%", "");

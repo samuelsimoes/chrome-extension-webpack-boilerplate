@@ -9,14 +9,14 @@ require("./prepare");
 require("./prepare_script_tags");
 
 config.entry["webpack-server"] =
-  ("webpack-dev-server/client?http://localhost:" + env.port);
+  ("webpack-dev-server/client?http://localhost:" + env.PORT);
 
 for (var entryName in config.entry) {
   config.entry[entryName] = ["webpack/hot/dev-server"].concat(config.entry[entryName]);
 }
 
 config.output.pathinfo = true;
-config.output.publicPath = ("http://localhost:" + env.port + "/");
+config.output.publicPath = ("http://localhost:" + env.PORT + "/");
 
 config.plugins =
   [new webpack.HotModuleReplacementPlugin()].concat(config.plugins || []);
@@ -30,4 +30,4 @@ var server =
     headers: { "Access-Control-Allow-Origin": "*" }
   });
 
-server.listen(env.port);
+server.listen(env.PORT);
