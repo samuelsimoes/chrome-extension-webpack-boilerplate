@@ -11,12 +11,23 @@ require("./prepare_script_tags");
 config.entry["webpack-server"] =
   ("webpack-dev-server/client?http://localhost:" + env.port);
 
+for (var entryName in config.entry) {
+  config.entry[entryName] = ["webpack/hot/dev-server"].concat(config.entry[entryName]);
+}
+
+config.output.pathinfo = true;
+config.output.publicPath = ("http://localhost:" + env.port + "/");
+
+config.plugins =
+  [new webpack.HotModuleReplacementPlugin()].concat(config.plugins || []);
+
 var compiler = webpack(config);
 
 var server =
   new WebpackDevServer(compiler, {
-    port: env.port,
-    contentBase: path.join(__dirname, "build")
+    hot: true,
+    contentBase: path.join(__dirname, "build"),
+    headers: { "Access-Control-Allow-Origin": "*" }
   });
 
 server.listen(env.port);
