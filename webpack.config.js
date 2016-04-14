@@ -26,12 +26,13 @@ var options = {
   },
   module: {
     rules: [
-      { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ },
+      { test: /\.(js|jsx)$/, loader: "babel-loader", exclude: /node_modules/ },
       { test: /\.css$/, loader: "style-loader!css-loader", exclude: /node_modules/  }
     ]
   },
   resolve: {
-    alias: alias
+    alias: alias,
+    extensions: [".js", ".jsx", ".css"]
   },
   plugins: [
     // expose and write the allowed env vars on the compiled bundle
