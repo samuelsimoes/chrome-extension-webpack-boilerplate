@@ -1,6 +1,6 @@
 #Chrome Extension Webpack Boilerplate
 
-A foundation boilerplate for rich Chrome Extensions using ES6 and [auto-reload or/and hot module replacement](https://webpack.github.io/docs/webpack-dev-server.html#automatic-refresh) through [Webpack](https://webpack.github.io/).
+A foundation boilerplate for rich Chrome Extensions using ES6 and [auto-reload and hot module replacement](https://webpack.github.io/docs/webpack-dev-server.html#automatic-refresh) through [Webpack](https://webpack.github.io/).
 
 ##Developing a new extension
 _I'll assume that you already read the [Webpack docs](https://webpack.github.io/docs) and the [Chrome Extension](https://developer.chrome.com/extensions/getstarted) docs._
@@ -51,15 +51,15 @@ Now, the content of `build` folder will be the extension ready to be submitted t
 ##Secrets
 If you are developing an extension that talks with some API you probably are using different keys for testing and production. Is a good practice you not commit your secret keys and expose to anyone that have access to the repository.
 
-To this task this boilerplate exposes the content of the file `secrets.<THE-ENV-MODE>.js` on your modules through the module `secrets`, so you can do things like this:
+To this task this boilerplate import the file `./secrets.<THE-ENV-MODE>.js` on your modules through the module named as `secrets`, so you can do things like this:
 
-_secrets.development.js_
+_./secrets.development.js_
 
 ```js
 export default { key: "123" };
 ```
 
-_foo.js_
+_./src/popup.js_
 
 ```js
 import secrets from "secrets";
