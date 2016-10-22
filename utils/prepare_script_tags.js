@@ -8,7 +8,7 @@ var env = require("./env"),
     fileSystem = require("fs"),
     path = require("path");
 
-var buildPath = path.join(__dirname, "build");
+var buildPath = path.join(__dirname, "../build");
 
 var appendLocalhost = function (content) {
   content =

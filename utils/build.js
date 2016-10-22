@@ -1,5 +1,5 @@
 var webpack = require("webpack"),
-    config = require("./webpack.config");
+    config = require("../webpack.config");
 
 require("./prepare");
 

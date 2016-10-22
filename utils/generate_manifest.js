@@ -1,4 +1,4 @@
-var manifest = require("./src/manifest.json"),
+var manifest = require("../src/manifest.json"),
     fileSystem = require("fs"),
     path = require("path"),
     env = require("./env");
@@ -16,6 +16,6 @@ if (env.NODE_ENV === "development") {
 }
 
 fileSystem.writeFileSync(
-  path.join(__dirname, "build", "manifest.json"),
+  path.join(__dirname, "../build/manifest.json"),
   JSON.stringify(manifest)
 );

@@ -1,7 +1,7 @@
 var webpack = require("webpack"),
     path = require("path"),
     fileSystem = require("fs"),
-    env = require("./env");
+    env = require("./utils/env");
 
 // load the secrets
 var alias = {};
