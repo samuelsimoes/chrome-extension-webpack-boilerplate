@@ -6,16 +6,17 @@ A foundation boilerplate for rich Chrome Extensions using ES6 and [auto-reload a
 _I'll assume that you already read the [Webpack docs](https://webpack.github.io/docs) and the [Chrome Extension](https://developer.chrome.com/extensions/getstarted) docs._
 
 1. Clone the repository.
-2. Run `npm install`.
-3. Change the package's name and description on `package.json`.
-4. Change the name of your extension on `src/manifest.json`.
-5. Run `npm run start`
-6. Load your extension on Chrome following:
+2. Install [yarn](https://yarnpkg.com): `npm install -g yarn`.
+3. Run `yarn`.
+4. Change the package's name and description on `package.json`.
+5. Change the name of your extension on `src/manifest.json`.
+6. Run `npm run start`
+7. Load your extension on Chrome following:
     1. Access `chrome://extensions/`
     2. Check `Developer mode`
     3. Click on `Load unpacked extension`
     4. Select the `build` folder.
-7. Have fun.
+8. Have fun.
 
 ##Structure
 All your extension's development code must be placed in `src` folder, including the extension manifest. When you run `npm run build` or `npm run start` the `dist` folder will be automatically created cloning the `src` folder and compiling the assets.
