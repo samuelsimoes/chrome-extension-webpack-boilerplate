@@ -30,5 +30,9 @@ module.exports = {
   },
   resolve: {
     alias: alias
-  }
+  },
+  plugins: [
+    // expose and write the allowed env vars on the compiled bundle
+    new webpack.DefinePlugin({ "process.env": env })
+  ]
 };
