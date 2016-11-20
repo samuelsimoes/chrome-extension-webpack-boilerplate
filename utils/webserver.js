@@ -8,11 +8,12 @@ require("./prepare");
 
 require("./prepare_script_tags");
 
-config.entry["webpack-server"] =
-  ("webpack-dev-server/client?http://localhost:" + env.PORT);
-
 for (var entryName in config.entry) {
-  config.entry[entryName] = ["webpack/hot/dev-server"].concat(config.entry[entryName]);
+  config.entry[entryName] =
+    [
+      ("webpack-dev-server/client?http://localhost:" + env.PORT),
+      "webpack/hot/dev-server"
+    ].concat(config.entry[entryName]);
 }
 
 config.output.pathinfo = true;

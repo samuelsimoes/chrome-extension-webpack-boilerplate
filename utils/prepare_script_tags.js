@@ -17,12 +17,6 @@ var appendLocalhost = function (content) {
       ("$1http://localhost:" + env.PORT + "/")
     );
 
-  content =
-    content.replace(
-      /(<\/body>)/,
-      "<script src=\"http://localhost:" + env.PORT + "/webpack-dev-server.js\"></script>$1"
-    );
-
   return content;
 };
 
