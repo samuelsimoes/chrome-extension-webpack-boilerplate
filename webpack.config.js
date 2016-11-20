@@ -3,7 +3,7 @@ var webpack = require("webpack"),
     fileSystem = require("fs"),
     env = require("./utils/env"),
     HtmlWebpackPlugin = require("html-webpack-plugin"),
-    HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
+    WriteFilePlugin = require("write-file-webpack-plugin");
 
 // load the secrets
 var alias = {};
@@ -39,21 +39,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "popup.html"),
       filename: "popup.html",
-      chunks: ["popup"],
-      alwaysWriteToDisk: true
+      chunks: ["popup"]
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "options.html"),
       filename: "options.html",
-      chunks: ["options"],
-      alwaysWriteToDisk: true
+      chunks: ["options"]
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "background.html"),
       filename: "background.html",
-      chunks: ["background"],
-      alwaysWriteToDisk: true
+      chunks: ["background"]
     }),
-    new HtmlWebpackHarddiskPlugin()
+    new WriteFilePlugin()
   ]
 };

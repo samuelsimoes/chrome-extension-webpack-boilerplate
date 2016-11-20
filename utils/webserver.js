@@ -14,9 +14,6 @@ for (var entryName in config.entry) {
     ].concat(config.entry[entryName]);
 }
 
-config.output.pathinfo = true;
-config.output.publicPath = ("http://localhost:" + env.PORT + "/");
-
 config.plugins =
   [new webpack.HotModuleReplacementPlugin()].concat(config.plugins || []);
 
