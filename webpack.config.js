@@ -33,6 +33,6 @@ module.exports = {
   },
   plugins: [
     // expose and write the allowed env vars on the compiled bundle
-    new webpack.DefinePlugin({ "process.env": env })
+    new webpack.DefinePlugin({ "process.env": JSON.stringify(env) })
   ]
 };
