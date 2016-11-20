@@ -19,7 +19,7 @@ _I'll assume that you already read the [Webpack docs](https://webpack.github.io/
 8. Have fun.
 
 ##Structure
-All your extension's development code must be placed in `src` folder, including the extension manifest. When you run `npm run build` or `npm run start` the `dist` folder will be automatically created cloning the `src` folder and compiling the assets.
+All your extension's development code must be placed in `src` folder, including the extension manifest.
 
 The boilerplate is already prepared to have a popup, a options page and a background page. You can easily customize this.
 
@@ -34,11 +34,6 @@ You can run the dev mode on other port if you want. Just specify the env var `po
 
 ```
 $ PORT=6002 npm run start
-```
-:warning: **Every javascript file that you want load on your HTML that is compiled by webpack, in order to work with the webpack dev server, must contain the `data-bundle` attribute on its script declaration, like this:**
-
-```
-<script data-bundle src="my_custom_bundle.js"></script>
 ```
 
 ##Packing

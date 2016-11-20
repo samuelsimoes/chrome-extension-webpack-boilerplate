@@ -6,8 +6,6 @@ var WebpackDevServer = require("webpack-dev-server"),
 
 require("./prepare");
 
-require("./prepare_script_tags");
-
 for (var entryName in config.entry) {
   config.entry[entryName] =
     [

@@ -1,7 +1,9 @@
 var webpack = require("webpack"),
     path = require("path"),
     fileSystem = require("fs"),
-    env = require("./utils/env");
+    env = require("./utils/env"),
+    HtmlWebpackPlugin = require("html-webpack-plugin"),
+    HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 
 // load the secrets
 var alias = {};
@@ -33,6 +35,25 @@ module.exports = {
   },
   plugins: [
     // expose and write the allowed env vars on the compiled bundle
-    new webpack.DefinePlugin({ "process.env": JSON.stringify(env) })
+    new webpack.DefinePlugin({ "process.env": JSON.stringify(env) }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "src", "popup.html"),
+      filename: "popup.html",
+      chunks: ["popup"],
+      alwaysWriteToDisk: true
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "src", "options.html"),
+      filename: "options.html",
+      chunks: ["options"],
+      alwaysWriteToDisk: true
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "src", "background.html"),
+      filename: "background.html",
+      chunks: ["background"],
+      alwaysWriteToDisk: true
+    }),
+    new HtmlWebpackHarddiskPlugin()
   ]
 };
