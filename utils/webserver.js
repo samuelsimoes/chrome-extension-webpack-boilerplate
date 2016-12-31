@@ -6,7 +6,8 @@ var WebpackDevServer = require("webpack-dev-server"),
 
 require("./prepare");
 
-var excludeEntriesToHotReload = (config.excludeEntriesToHotReload || []);
+var options = (config.chromeExtensionBoilerplate || {});
+var excludeEntriesToHotReload = (options.notHotReload || []);
 
 for (var entryName in config.entry) {
   if (excludeEntriesToHotReload.indexOf(entryName) === -1) {
