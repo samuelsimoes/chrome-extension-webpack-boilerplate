@@ -25,8 +25,8 @@ module.exports = {
     filename: "[name].bundle.js"
   },
   module: {
-    loaders: [
-      { test: /\.js$/, loader: "babel" },
+    rules: [
+      { test: /\.js$/, loader: "babel-loader" },
       { test: /\.css$/, loader: "style-loader!css-loader" }
     ]
   },
