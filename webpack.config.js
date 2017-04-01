@@ -14,7 +14,7 @@ if (fileSystem.existsSync(secretsPath)) {
   alias["secrets"] = secretsPath;
 }
 
-module.exports = {
+var options = {
   entry: {
     popup: path.join(__dirname, "src", "js", "popup.js"),
     options: path.join(__dirname, "src", "js", "options.js"),
@@ -56,3 +56,9 @@ module.exports = {
     new WriteFilePlugin()
   ]
 };
+
+if (env.NODE_ENV === "development") {
+  options.devtool = "cheap-module-eval-source-map";
+}
+
+module.exports = options;
