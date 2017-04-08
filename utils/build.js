@@ -3,6 +3,8 @@ var webpack = require("webpack"),
 
 require("./prepare");
 
+delete config.chromeExtensionBoilerplate;
+
 webpack(
   config,
   function (err) { if (err) throw err; }
