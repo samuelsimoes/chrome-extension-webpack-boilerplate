@@ -5,3 +5,4 @@ var fileSystem = require("fs-extra"),
 fileSystem.emptyDirSync(path.join(__dirname, "../build"));
 
 require("./generate_manifest");
+require("./copy_assets");
