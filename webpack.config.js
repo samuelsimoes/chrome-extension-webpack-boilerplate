@@ -10,6 +10,8 @@ var alias = {};
 
 var secretsPath = path.join(__dirname, ("secrets." + env.NODE_ENV + ".js"));
 
+var fileExtensions = ["jpg", "jpeg", "png", "gif", "eot", "otf", "svg", "ttf", "woff", "woff2"];
+
 if (fileSystem.existsSync(secretsPath)) {
   alias["secrets"] = secretsPath;
 }
@@ -26,7 +28,21 @@ var options = {
   },
   module: {
     rules: [
-      { test: /\.css$/, loader: "style-loader!css-loader", exclude: /node_modules/  }
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader",
+        exclude: /node_modules/
+      },
+      {
+        test: new RegExp('\.(' + fileExtensions.join('|') + ')$'),
+        loader: "file-loader?name=[name].[ext]",
+        exclude: /node_modules/
+      },
+      {
+        test: /\.html$/,
+        loader: "html-loader",
+        exclude: /node_modules/
+      }
     ]
   },
   resolve: {
