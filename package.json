@@ -6,7 +6,7 @@
     "build": "node utils/build.js",
     "start": "node utils/webserver.js"
   },
-  "dependencies": {
+  "devDependencies": {
     "css-loader": "^0.25.0",
     "file-loader": "^0.11.2",
     "fs-extra": "^0.30.0",
