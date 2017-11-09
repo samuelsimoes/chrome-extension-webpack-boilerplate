@@ -1,7 +1,7 @@
-var fileSystem = require("fs-extra"),
-    path = require("path");
+import fileSystem from "fs-extra";
+import path from "path";
 
 // clean de dist folder
 fileSystem.emptyDirSync(path.join(__dirname, "../build"));
 
-require("./generate_manifest");
+import "./generate_manifest";

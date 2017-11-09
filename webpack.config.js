@@ -1,22 +1,22 @@
-var webpack = require("webpack"),
-    path = require("path"),
-    fileSystem = require("fs"),
-    env = require("./utils/env"),
-    HtmlWebpackPlugin = require("html-webpack-plugin"),
-    WriteFilePlugin = require("write-file-webpack-plugin");
+import webpack from "webpack";
+import fileSystem from "fs";
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import WriteFilePlugin from "write-file-webpack-plugin";
+import env from "./utils/env";
 
 // load the secrets
-var alias = {};
+const alias = {};
 
-var secretsPath = path.join(__dirname, ("secrets." + env.NODE_ENV + ".js"));
+const secretsPath = path.join(__dirname, (`secrets.${env.NODE_ENV}.js`));
 
-var fileExtensions = ["jpg", "jpeg", "png", "gif", "eot", "otf", "svg", "ttf", "woff", "woff2"];
+const fileExtensions = ["jpg", "jpeg", "png", "gif", "eot", "otf", "svg", "ttf", "woff", "woff2"];
 
 if (fileSystem.existsSync(secretsPath)) {
   alias["secrets"] = secretsPath;
 }
 
-var options = {
+const options = {
   entry: {
     popup: path.join(__dirname, "src", "js", "popup.js"),
     options: path.join(__dirname, "src", "js", "options.js"),
@@ -28,6 +28,11 @@ var options = {
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        loader: "babel-loader",
+        exclude: /node_modules/
+      },
       {
         test: /\.css$/,
         loader: "style-loader!css-loader",
@@ -76,4 +81,4 @@ if (env.NODE_ENV === "development") {
   options.devtool = "cheap-module-eval-source-map";
 }
 
-module.exports = options;
+export default options;

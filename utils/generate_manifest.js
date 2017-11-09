@@ -1,7 +1,7 @@
-var manifest = require("../src/manifest.json"),
-    fileSystem = require("fs"),
-    path = require("path"),
-    env = require("./env");
+import fileSystem from "fs";
+import path from "path";
+import env from "./env";
+import manifest from "../src/manifest.json";
 
 // generates the manifest file using the package.json informations
 manifest.description = process.env.npm_package_description;
