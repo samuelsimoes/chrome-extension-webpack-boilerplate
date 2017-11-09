@@ -1,13 +1,12 @@
-var WebpackDevServer = require("webpack-dev-server"),
-    webpack = require("webpack"),
-    config = require("../webpack.config"),
-    env = require("./env"),
-    path = require("path");
+import webpack from "webpack";
+import WebpackDevServer from "webpack-dev-server";
+import config  from "../webpack.config";
+import path from "path";
+import env from "./env";
+import "./prepare";
 
-require("./prepare");
-
-var options = (config.chromeExtensionBoilerplate || {});
-var excludeEntriesToHotReload = (options.notHotReload || []);
+const options = (config.chromeExtensionBoilerplate || {});
+const excludeEntriesToHotReload = (options.notHotReload || []);
 
 for (var entryName in config.entry) {
   if (excludeEntriesToHotReload.indexOf(entryName) === -1) {
@@ -24,9 +23,9 @@ config.plugins =
 
 delete config.chromeExtensionBoilerplate;
 
-var compiler = webpack(config);
+const compiler = webpack(config);
 
-var server =
+const server =
   new WebpackDevServer(compiler, {
     hot: true,
     contentBase: path.join(__dirname, "../build"),

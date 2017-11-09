@@ -1,3 +1,17 @@
-node_modules
+# Build directory
 build
-secrets.*.js
+dist
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directory
+node_modules
+
+# Mac ignore
+.DS_Store
+
+#Environment variables
+.env
