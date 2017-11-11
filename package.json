@@ -7,6 +7,8 @@
     "start": "node utils/webserver.js"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.2.0",
     "css-loader": "^0.25.0",
     "file-loader": "^0.11.2",
     "fs-extra": "^0.30.0",
