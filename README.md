@@ -5,6 +5,11 @@ A basic foundation boilerplate for rich Chrome Extensions using [Webpack](https:
 ## Developing a new extension
 _I'll assume that you already read the [Webpack docs](https://webpack.github.io/docs) and the [Chrome Extension](https://developer.chrome.com/extensions/getstarted) docs._
 
+### Requirements
+  - [Node.js](https://nodejs.org/en/) v8.6.0 or newer
+
+### Quick Start
+
 1. Clone the repository.
 2. Install [yarn](https://yarnpkg.com): `npm install -g yarn`.
 3. Run `yarn`.
