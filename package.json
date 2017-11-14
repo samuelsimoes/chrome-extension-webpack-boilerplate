@@ -6,6 +6,9 @@
     "build": "node utils/build.js",
     "start": "node utils/webserver.js"
   },
+  "engines": {
+    "node": ">=8.6.0"
+  },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.2.0",
