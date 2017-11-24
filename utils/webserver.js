@@ -25,7 +25,7 @@ delete config.chromeExtensionBoilerplate;
 var compiler = webpack(config);
 
 var server =
-  new WebpackDevServer(compiler, {
+  new WebpackDevServer(compiler, conf.devServer, {
     hot: true,
     contentBase: path.join(__dirname, "../build"),
     headers: { "Access-Control-Allow-Origin": "*" }
