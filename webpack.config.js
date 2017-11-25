@@ -50,6 +50,11 @@ var options = {
   resolve: {
     alias: alias
   },
+  devServer: {
+    stats: {
+      colors: true
+    }
+  },
   plugins: [
     // clean the build folder
     new CleanWebpackPlugin(["build"]),
