@@ -3,20 +3,21 @@
   "version": "0.0.1",
   "description": "A boilerplate to chrome extension with webpack",
   "scripts": {
-    "build": "node utils/build.js",
+    "build": "webpack",
     "start": "node utils/webserver.js"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.17",
-    "copy-webpack-plugin": "^4.2.0",
-    "css-loader": "^0.25.0",
-    "file-loader": "^0.11.2",
-    "fs-extra": "^0.30.0",
-    "html-loader": "^0.4.5",
-    "html-webpack-plugin": "2.24.1",
-    "style-loader": "^0.13.0",
-    "webpack": "2.2.1",
+    "copy-webpack-plugin": "^4.2.3",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "fs-extra": "^4.0.2",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.24.1",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
     "webpack-dev-server": "^2.3.0",
-    "write-file-webpack-plugin": "3.4.2"
+    "write-file-webpack-plugin": "^4.2.0"
   }
 }
