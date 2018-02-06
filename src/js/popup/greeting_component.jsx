@@ -1,46 +1,49 @@
-import React from "react";
-import icon from "../../img/icon-128.png";
+import React from 'react';
 import Unsplash, { toJson } from 'unsplash-js';
 import ImageView from './imageView.jsx';
 
 const unsplash = new Unsplash({
-  applicationId: "cddfbdb3b08a9e68a8766d6ab7c07893a3ef6571020af994bf21b5631c6be802",
-  secret: "234b6003eac47b8ac815c977e157d96b72d23b687723f5d2af4dd07430c4c721",
-  callbackUrl: "urn:ietf:wg:oauth:2.0:oob"
+  applicationId: 'cddfbdb3b08a9e68a8766d6ab7c07893a3ef6571020af994bf21b5631c6be802',
+  secret: '234b6003eac47b8ac815c977e157d96b72d23b687723f5d2af4dd07430c4c721',
+  callbackUrl: 'urn:ietf:wg:oauth:2.0:oob'
 });
 
 let renderCount = 0;
 export default class Main extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      wordImages: [],
+    }
+  }
   componentDidMount() {
-    console.log("Doing stuff...")
-    unsplash.search.photos("dogs", 1, 4)
+    unsplash.search.photos('dogs', 1, 4)
       .then(toJson)
       .then(json => {
-        console.log(json)
+        this.setState({ wordImages: json });
       });
   }
   render() {
-    console.log("RENDER #", renderCount++)
+    let imageArr = this.state.wordImages.results;
     return (
       <div>
-        <p>Hello, find me on src/js/popup/greeting_component.jsx</p>
-        <ImageView imageURL={"https://images.unsplash.com/photo-1505628346881-b72b27e84530?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjIwNjA4fQ&s=2df218259b5c5ae1d2fcce3df052a909"} />
-        <ImageView imageURL={"https://images.unsplash.com/photo-1505628346881-b72b27e84530?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjIwNjA4fQ&s=2df218259b5c5ae1d2fcce3df052a909"} />
-        <ImageView imageURL={"https://images.unsplash.com/photo-1505628346881-b72b27e84530?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjIwNjA4fQ&s=2df218259b5c5ae1d2fcce3df052a909"} />
-        <ImageView imageURL={"https://images.unsplash.com/photo-1505628346881-b72b27e84530?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjIwNjA4fQ&s=2df218259b5c5ae1d2fcce3df052a909"} />
+        {imageArr.map(image => <ImageView imageURL={image.urls.small} />)}
+        <h2>Dogs</h2>
+        <p>a domesticated carnivorous mammal that typically has a long snout, an acute sense of smell, and a barking, howling, or whining voice. It is widely kept as a pet or for work or field sports.</p>
+        <button>Audio</button>
       </div>
-    )
+    );
   }
 }
 
 // JSX Structure:
-// Picture:
-// Picture:
-// Picture:
-// Picture:
-// Word Name:
-// Word Def:
-// Audio:
+// XX Picture:
+// XX Picture:
+// XX Picture:
+// XX Picture:
+// XX Word Name:
+// XX Word Def:
+// XX Audio:
 
 // Flickr:
 //    map(picture => pictureComponent);

@@ -8,10 +8,9 @@ export default class ImageView extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
-        <img src={this.props.imageURL} alt="Smiley face" height="100" width="100" />
+        <img src={this.props.imageURL} alt="Smiley face" height="125" width="125" />
       </div>
     )
   }
