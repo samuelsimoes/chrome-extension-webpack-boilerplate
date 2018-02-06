@@ -11,3 +11,19 @@ export default class extends React.Component {
     )
   }
 };
+
+// JSX Structure:
+// Picture:
+// Picture:
+// Picture:
+// Picture:
+// Word Name:
+// Word Def:
+// Audio:
+
+// Flickr:
+//    map(picture => pictureComponent);
+//  Wordnik:
+//    wordName:
+//    wordDef:
+//    audioButton:

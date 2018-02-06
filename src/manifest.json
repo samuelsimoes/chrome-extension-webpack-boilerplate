@@ -1,5 +1,5 @@
 {
-  "name": "Chrome Extension Webpack",
+  "name": "Lexi: Expand your lexicon",
   "options_page": "options.html",
   "background": {
     "page": "background.html"

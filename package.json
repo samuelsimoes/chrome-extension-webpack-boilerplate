@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "unsplash-js": "^4.8.0"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.17",
