@@ -1,7 +1,8 @@
 import React from "react";
 import icon from "../../img/icon-128.png"
+import { hot } from "react-hot-loader";
 
-export default class extends React.Component {
+class GreetingComponent extends React.Component {
   render () {
     return (
       <div>
@@ -11,3 +12,5 @@ export default class extends React.Component {
     )
   }
 };
+
+export default hot(module)(GreetingComponent)
