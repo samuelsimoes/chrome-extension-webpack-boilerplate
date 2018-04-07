@@ -101,5 +101,13 @@ ApiCall({ key: secrets.key });
 ## With React.js
 :bulb: If you want use [React.js](https://facebook.github.io/react/) with this boilerplate, check the **[react branch](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate/tree/react)**.
 
+
+## Contributing
+
+1. **Please!! Do not create a pull request without an issue before discussing the problem.**
+2. On your PR make sure that you are following the current codebase style.
+3. Your PR must be single purpose. Resolve just one problem on your PR.
+4. Make sure to commit in the same style that we are committing until now on the project.
+
 -------------
 Samuel Simões ~ [@samuelsimoes](https://twitter.com/samuelsimoes) ~ [Blog](http://blog.samuelsimoes.com/)
