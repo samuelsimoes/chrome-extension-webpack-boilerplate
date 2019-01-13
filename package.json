@@ -11,9 +11,9 @@
     "react-dom": "^15.3.2"
   },
   "devDependencies": {
-    "babel-core": "^6.17.0",
-    "babel-loader": "^6.2.4",
-    "babel-preset-react": "^6.16.0",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "8.0.5",
     "clean-webpack-plugin": "^1.0.0",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "2.1.0",
