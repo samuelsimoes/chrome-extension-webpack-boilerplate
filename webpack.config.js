@@ -19,6 +19,7 @@ if (fileSystem.existsSync(secretsPath)) {
 }
 
 var options = {
+  mode: process.env.NODE_ENV || "development",
   entry: {
     popup: path.join(__dirname, "src", "js", "popup.js"),
     options: path.join(__dirname, "src", "js", "options.js"),
@@ -54,9 +55,7 @@ var options = {
     // clean the build folder
     new CleanWebpackPlugin(["build"]),
     // expose and write the allowed env vars on the compiled bundle
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify(env.NODE_ENV)
-    }),
+    new webpack.EnvironmentPlugin(["NODE_ENV"]),
     new CopyWebpackPlugin([{
       from: "src/manifest.json",
       transform: function (content, path) {
