@@ -12,7 +12,7 @@ _I'll assume that you already read the [Webpack docs](https://webpack.github.io/
 4. Run `yarn`.
 5. Change the package's name and description on `package.json`.
 6. Change the name of your extension on `src/manifest.json`.
-7. Run `npm run start`
+7. Run `yarn run start`
 8. Load your extension on Chrome following:
     1. Access `chrome://extensions/`
     2. Check `Developer mode`
@@ -30,12 +30,12 @@ Each page has its own [assets package defined](https://github.com/samuelsimoes/c
 You must use the [ES6 modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) to a better code organization. The boilerplate is already prepared to that and [here you have a little example](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate/blob/master/src/js/popup.js#L2-L4).
 
 ## Webpack auto-reload and HRM
-To make your workflow much more efficient this boilerplate uses the [webpack server](https://webpack.github.io/docs/webpack-dev-server.html) to development (started with `npm run server`) with auto reload feature that reloads the browser automatically every time that you save some file o your editor.
+To make your workflow much more efficient this boilerplate uses the [webpack server](https://webpack.github.io/docs/webpack-dev-server.html) to development (started with `yarn run server`) with auto reload feature that reloads the browser automatically every time that you save some file o your editor.
 
 You can run the dev mode on other port if you want. Just specify the env var `port` like this:
 
 ```
-$ PORT=6002 npm run start
+$ PORT=6002 yarn run start
 ```
 
 ## Content Scripts
@@ -75,7 +75,7 @@ and on your `src/manifest.json`:
 After the development of your extension run the command
 
 ```
-$ NODE_ENV=production npm run build
+$ NODE_ENV=production yarn run build
 ```
 Now, the content of `build` folder will be the extension ready to be submitted to the Chrome Web Store. Just take a look at the [official guide](https://developer.chrome.com/webstore/publish) to more infos about publishing.
 
