@@ -42,6 +42,15 @@ const options = {
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        use: {
+          loader: "ts-loader",
+          options: {
+            transpileOnly: true
+          }
+        }
+      },
+      {
         test: /\.css$/,
         loader: "style-loader!css-loader",
         exclude: /node_modules/
@@ -59,6 +68,7 @@ const options = {
     ]
   },
   resolve: {
+    extensions: [".js", ".ts", ".tsx", ".json", ".mjs", ".wasm"],
     alias: alias
   },
   plugins: [
