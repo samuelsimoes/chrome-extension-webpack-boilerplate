@@ -1,16 +1,16 @@
-const webpack = require("webpack");
 const path = require("path");
-const fileSystem = require("fs");
-const env = require("./utils/env");
+const fs = require("fs");
 const CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin;
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WriteFilePlugin = require("write-file-webpack-plugin");
+const pkg = require("./package.json");
 
 // load the secrets
 const alias = {};
 
-const secretsPath = path.join(__dirname, "secrets." + env.NODE_ENV + ".js");
+const env = process.env.NODE_ENV || "devolpment";
+const secretsPath = path.join(__dirname, "secrets." + env + ".js");
 
 const fileExtensions = [
   "jpg",
@@ -25,15 +25,15 @@ const fileExtensions = [
   "woff2"
 ];
 
-if (fileSystem.existsSync(secretsPath)) {
+if (fs.existsSync(secretsPath)) {
   alias["secrets"] = secretsPath;
 }
 
-const options = {
+module.exports = {
   entry: {
-    popup: path.join(__dirname, "src", "js", "popup.js"),
-    options: path.join(__dirname, "src", "js", "options.js"),
-    background: path.join(__dirname, "src", "js", "background.js")
+    popup: path.join(__dirname, "src", "script", "popup.ts"),
+    options: path.join(__dirname, "src", "script", "options.ts"),
+    background: path.join(__dirname, "src", "script", "background.ts")
   },
   output: {
     path: path.join(__dirname, "build"),
@@ -75,7 +75,6 @@ const options = {
     // clean the build folder
     new CleanWebpackPlugin(),
     // expose and write the allowed env vars on the compiled bundle
-    new webpack.EnvironmentPlugin(["NODE_ENV"]),
     new CopyWebpackPlugin([
       {
         from: "src/manifest.json",
@@ -83,8 +82,8 @@ const options = {
           // generates the manifest file using the package.json informations
           return Buffer.from(
             JSON.stringify({
-              description: process.env.npm_package_description,
-              version: process.env.npm_package_version,
+              description: pkg.description,
+              version: pkg.version,
               ...JSON.parse(content.toString())
             })
           );
@@ -109,9 +108,3 @@ const options = {
     new WriteFilePlugin()
   ]
 };
-
-if (env.NODE_ENV === "development") {
-  options.devtool = "cheap-module-eval-source-map";
-}
-
-module.exports = options;
