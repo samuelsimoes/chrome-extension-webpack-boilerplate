@@ -1,5 +1,6 @@
 function sayHello() {
-  alert("hello!4");
+  alert("hello!");
 }
 
-sayHello();
+const el = document.querySelector("#button") as HTMLElement;
+el.onclick = sayHello;

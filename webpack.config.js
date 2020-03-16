@@ -1,7 +1,5 @@
 const path = require("path");
-const CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin;
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -40,22 +38,12 @@ module.exports = {
     extensions: [".js", ".ts", ".tsx", ".json", ".mjs", ".wasm"]
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
       {
         from: "assets/*",
         flatten: true
       }
-    ]),
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "popup.html"),
-      filename: "popup.html",
-      chunks: ["popup"]
-    }),
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "options.html"),
-      filename: "options.html",
-      chunks: ["options"]
-    })
+    ])
   ]
 };
