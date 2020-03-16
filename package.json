@@ -1,12 +1,11 @@
 {
-  "name": "mizchi-chrome-extension-webpack",
-  "version": "0.0.1",
-  "description": "A boilerplate to chrome extension with webpack",
+  "private": true,
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack --mode development --watch"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.100",
     "clean-webpack-plugin": "3.0.0",
     "copy-webpack-plugin": "5.1.1",
     "crx-hotreload": "^1.0.4",
@@ -19,6 +18,5 @@
     "typescript": "^3.8.3",
     "webpack": "4.42.0",
     "webpack-cli": "3.3.11"
-  },
-  "dependencies": {}
+  }
 }
