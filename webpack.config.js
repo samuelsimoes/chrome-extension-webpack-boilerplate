@@ -3,14 +3,7 @@ const fs = require("fs");
 const CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin;
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const WriteFilePlugin = require("write-file-webpack-plugin");
 const pkg = require("./package.json");
-
-// load the secrets
-const alias = {};
-
-const env = process.env.NODE_ENV || "devolpment";
-const secretsPath = path.join(__dirname, "secrets." + env + ".js");
 
 const fileExtensions = [
   "jpg",
@@ -24,10 +17,6 @@ const fileExtensions = [
   "woff",
   "woff2"
 ];
-
-if (fs.existsSync(secretsPath)) {
-  alias["secrets"] = secretsPath;
-}
 
 module.exports = {
   entry: {
@@ -69,7 +58,12 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".ts", ".tsx", ".json", ".mjs", ".wasm"],
-    alias: alias
+    alias: {
+      secrets: path.join(
+        __dirname,
+        "secrets." + (process.env.NODE_ENV || "development") + ".js"
+      )
+    }
   },
   plugins: [
     // clean the build folder
@@ -104,7 +98,6 @@ module.exports = {
       template: path.join(__dirname, "src", "background.html"),
       filename: "background.html",
       chunks: ["background"]
-    }),
-    new WriteFilePlugin()
+    })
   ]
 };
