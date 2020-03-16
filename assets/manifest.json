@@ -1,12 +1,15 @@
 {
   "name": "mizchi-chrome-extension-webpack",
   "version": "0.0.1",
+  "minimum_chrome_version": "10.0",
   "description": "A boilerplate to chrome extension with webpack",
   "options_page": "options.html",
+  "devtools_page": "devtools.html",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
+  "permissions": ["activeTab", "tabs", "http://*/*", "https://*/*"],
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "icon-34.png"
