@@ -27,7 +27,8 @@ var options = {
   },
   output: {
     path: path.join(__dirname, "build"),
-    filename: "[name].bundle.js"
+    filename: "[name].bundle.js",
+    publicPath: "build/"
   },
   module: {
     rules: [
