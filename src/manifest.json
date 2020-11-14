@@ -2,7 +2,10 @@
   "name": "Chrome Extension Webpack",
   "options_page": "options.html",
   "background": {
-    "page": "background.html"
+    "scripts": [
+      "background.bundle.js",
+      "hot_reload.bundle.js"
+    ]
   },
   "browser_action": {
     "default_popup": "popup.html",

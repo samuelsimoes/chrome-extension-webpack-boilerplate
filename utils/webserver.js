@@ -32,7 +32,8 @@ var server =
     headers: {
       "Access-Control-Allow-Origin": "*"
     },
-    disableHostCheck: true
+    disableHostCheck: true,
+    watchContentBase: true
   });
 
 server.listen(env.PORT);
