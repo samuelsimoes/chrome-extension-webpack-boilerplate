@@ -6,7 +6,7 @@ import RoninApp from "../../roninApp";
 const entryPoint = document.createElement("div");
 entryPoint.id = "entry-point";
 entryPoint.style =
-  "position: sticky; bottom:0; left: 100%; margin-right: 10px; margin-bottom: 10px; width: fit-content; ";
+  "position: sticky; bottom:10px; left: 100%; margin-right: 10px; margin-bottom: 10px; width: fit-content; ";
 
 document.body.appendChild(entryPoint);
 
