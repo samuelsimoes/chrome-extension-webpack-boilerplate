@@ -7,6 +7,9 @@
     "start": "node utils/webserver.js"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "abi-decoder": "^2.4.0",
     "react": "16.12.0",
     "react-dom": "16.12.0"
   },
@@ -14,7 +17,6 @@
     "@babel/core": "7.7.4",
     "@babel/preset-react": "7.7.4",
     "babel-loader": "8.0.6",
-    "react-hot-loader": "4.12.18",
     "clean-webpack-plugin": "3.0.0",
     "copy-webpack-plugin": "5.0.5",
     "css-loader": "3.2.0",
@@ -22,10 +24,11 @@
     "fs-extra": "8.1.0",
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.2.0",
+    "react-hot-loader": "4.12.18",
     "style-loader": "1.0.0",
     "webpack": "4.41.2",
+    "webpack-cli": "3.3.10",
     "webpack-dev-server": "3.9.0",
-    "write-file-webpack-plugin": "4.5.1",
-    "webpack-cli": "3.3.10"
+    "write-file-webpack-plugin": "4.5.1"
   }
 }
