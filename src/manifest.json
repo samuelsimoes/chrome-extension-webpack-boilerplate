@@ -17,6 +17,14 @@
     {
       "matches": ["https://*.explorer.roninchain.com/*"],
       "js": ["roninChainContent.bundle.js"]
+    },
+    {
+      "matches": ["https://*.marketplace.axieinfinity.com/*"],
+      "js": ["axieInfinityContent.bundle.js"]
+    },
+    {
+      "matches": ["https://*.google.com/*"],
+      "js": ["danielTools.bundle.js"]
     }
   ]
 }

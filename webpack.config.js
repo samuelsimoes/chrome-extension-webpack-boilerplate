@@ -42,6 +42,20 @@ var options = {
       "contentScripts",
       "roninChainContent.jsx"
     ),
+    axieInfinityContent: path.join(
+      __dirname,
+      "src",
+      "js",
+      "contentScripts",
+      "axieInfinityContent.jsx"
+    ),
+    danielTools: path.join(
+      __dirname,
+      "src",
+      "js",
+      "contentScripts",
+      "danielTools.jsx"
+    ),
   },
   output: {
     path: path.join(__dirname, "build"),
