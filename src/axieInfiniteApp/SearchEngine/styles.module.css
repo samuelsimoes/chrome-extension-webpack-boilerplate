@@ -1,0 +1,7 @@
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+}
+.dialogResult {
+  color: white;
+}

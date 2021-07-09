@@ -1,13 +1,37 @@
 import calculateQuality from "./calculateQuality";
 
-export default ({
-  parts = null,
-  pureness = null,
-  classes = null,
+// Normalize the response
+function formatResponse(res) {
+  const { results } = res.data.axies;
+
+  return results.map((axie) => {
+    const {
+      id,
+      genes,
+      auction: { currentPriceUSD },
+      image,
+      breedCount,
+    } = axie;
+    const { quality } = calculateQuality(genes, axie.class);
+
+    return {
+      id,
+      usdPrice: currentPriceUSD,
+      quality: (quality * 100).toFixed(2),
+      image,
+      breedCount,
+    };
+  });
+}
+
+export default function fetchMarketPage({
+  parts,
+  pureness,
+  classes,
   breed,
   ...rest
-}) =>
-  fetch("https://axieinfinity.com/graphql-server-v2/graphql?r=freak", {
+}) {
+  return fetch("https://axieinfinity.com/graphql-server-v2/graphql", {
     method: "post",
     headers: {
       "content-type": "application/json",
@@ -29,10 +53,10 @@ export default ({
           classes,
           stages: null,
           numMystic: null,
-          pureness,
+          pureness: pureness ? [pureness] : null,
           title: null,
           breedable: null,
-          breedCount: [breed, breed],
+          breedCount: breed,
           hp: [],
           skill: [],
           speed: [],
@@ -44,22 +68,4 @@ export default ({
   })
     .then((res) => res.json())
     .then(formatResponse);
-
-// Normalize the response
-function formatResponse(res) {
-  const { results } = res.data.axies;
-  return results.map((axie) => {
-    const {
-      id,
-      genes,
-      auction: { currentPriceUSD },
-    } = axie;
-    const { quality } = calculateQuality(genes, axie.class);
-
-    return {
-      id,
-      usdPrice: currentPriceUSD,
-      quality: (quality * 100).toFixed(2),
-    };
-  });
 }
