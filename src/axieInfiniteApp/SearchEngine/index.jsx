@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
@@ -74,7 +71,6 @@ const SearchEngine = () => {
   const [axieClass, setAxieClass] = useState([]);
   const [axieMarket, setAxieMarket] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-  const classes = useStyles();
 
   const handlePureness = (event, newValue) => {
     setPureness(newValue);
@@ -104,127 +100,119 @@ const SearchEngine = () => {
     });
 
   return (
-    <div className={styles.buttonsContainer}>
-      <Card className={classes.root}>
-        <CardContent>
-          <Typography id="discrete-slider" gutterBottom>
-            Pureness: {pureness}
-          </Typography>
-          <Slider
-            defaultValue={pureness}
-            getAriaValueText={(value) => value}
-            aria-labelledby="discrete-slider"
-            valueLabelDisplay="auto"
-            onChange={handlePureness}
-            value={pureness}
-            step={1}
-            marks
-            min={0}
-            max={6}
-          />
-          <Typography id="range-slider" gutterBottom>
-            Pureness range: {purenessRange[0]} - {purenessRange[1]}
-          </Typography>
-          <Slider
-            value={purenessRange}
-            onChange={handleChangeRange}
-            valueLabelDisplay="auto"
-            aria-labelledby="range-slider"
-            getAriaValueText={(value) => `${value}%`}
-          />
-          <Typography id="discrete-slider" gutterBottom>
-            Breed: {breed[0]} - {breed[1]}
-          </Typography>
-          <Slider
-            getAriaValueText={(value) => value}
-            aria-labelledby="discrete-slider"
-            valueLabelDisplay="auto"
-            onChange={handleBreed}
-            value={breed}
-            step={1}
-            marks
-            min={0}
-            max={7}
-          />
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography>Class and parts</Typography>
-            </AccordionSummary>
-            <AccordionDetails
-              style={{ display: "flex", flexDirection: "column" }}
-            >
-              <Autocomplete
-                multiple
-                id="checkboxes-tags-demo"
-                options={bodyParts}
-                disableCloseOnSelect
-                getOptionLabel={(part) => part}
-                onChange={(_, values) => setParts([...values])}
-                renderOption={(part, { selected }) => (
-                  <span>
-                    <Checkbox
-                      icon={icon}
-                      checkedIcon={checkedIcon}
-                      style={{ marginRight: 8 }}
-                      checked={selected}
-                    />
-                    {part}
-                  </span>
-                )}
-                style={{ marginTop: "10px" }}
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    variant="outlined"
-                    label="Parts"
-                    placeholder="Parts"
-                  />
-                )}
+    <div style={{ width: "100%" }} className={styles.buttonsContainer}>
+      <Typography id="discrete-slider" gutterBottom>
+        Pureness: {pureness}
+      </Typography>
+      <Slider
+        defaultValue={pureness}
+        getAriaValueText={(value) => value}
+        aria-labelledby="discrete-slider"
+        valueLabelDisplay="auto"
+        onChange={handlePureness}
+        value={pureness}
+        step={1}
+        marks
+        min={0}
+        max={6}
+      />
+      <Typography id="range-slider" gutterBottom>
+        Pureness range: {purenessRange[0]} - {purenessRange[1]}
+      </Typography>
+      <Slider
+        value={purenessRange}
+        onChange={handleChangeRange}
+        valueLabelDisplay="auto"
+        aria-labelledby="range-slider"
+        getAriaValueText={(value) => `${value}%`}
+      />
+      <Typography id="discrete-slider" gutterBottom>
+        Breed: {breed[0]} - {breed[1]}
+      </Typography>
+      <Slider
+        getAriaValueText={(value) => value}
+        aria-labelledby="discrete-slider"
+        valueLabelDisplay="auto"
+        onChange={handleBreed}
+        value={breed}
+        step={1}
+        marks
+        min={0}
+        max={7}
+      />
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Class and parts</Typography>
+        </AccordionSummary>
+        <AccordionDetails style={{ display: "flex", flexDirection: "column" }}>
+          <Autocomplete
+            multiple
+            id="checkboxes-tags-demo"
+            options={bodyParts}
+            disableCloseOnSelect
+            getOptionLabel={(part) => part}
+            onChange={(_, values) => setParts([...values])}
+            renderOption={(part, { selected }) => (
+              <span>
+                <Checkbox
+                  icon={icon}
+                  checkedIcon={checkedIcon}
+                  style={{ marginRight: 8 }}
+                  checked={selected}
+                />
+                {part}
+              </span>
+            )}
+            style={{ marginTop: "10px" }}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                variant="outlined"
+                label="Parts"
+                placeholder="Parts"
               />
-              <Autocomplete
-                multiple
-                id="checkboxes-tags-demo"
-                options={axieClasses}
-                disableCloseOnSelect
-                getOptionLabel={(part) => part}
-                onChange={(_, values) => setAxieClass([...values])}
-                renderOption={(classname, { selected }) => (
-                  <span>
-                    <Checkbox
-                      icon={icon}
-                      checkedIcon={checkedIcon}
-                      style={{ marginRight: 8 }}
-                      checked={selected}
-                    />
-                    {classname}
-                  </span>
-                )}
-                style={{ marginTop: "10px" }}
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    variant="outlined"
-                    label="Classes"
-                    placeholder="Classes"
-                  />
-                )}
+            )}
+          />
+          <Autocomplete
+            multiple
+            id="checkboxes-tags-demo"
+            options={axieClasses}
+            disableCloseOnSelect
+            getOptionLabel={(part) => part}
+            onChange={(_, values) => setAxieClass([...values])}
+            renderOption={(classname, { selected }) => (
+              <span>
+                <Checkbox
+                  icon={icon}
+                  checkedIcon={checkedIcon}
+                  style={{ marginRight: 8 }}
+                  checked={selected}
+                />
+                {classname}
+              </span>
+            )}
+            style={{ marginTop: "10px" }}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                variant="outlined"
+                label="Classes"
+                placeholder="Classes"
               />
-            </AccordionDetails>
-          </Accordion>
-        </CardContent>
-        <CardActions>
-          <Button onClick={onSearch} variant="contained" color="primary">
-            Search
-          </Button>
-          <Button onClick={sendRestore} variant="outlined" color="secondary">
-            Reload
-          </Button>
-        </CardActions>
-      </Card>
+            )}
+          />
+        </AccordionDetails>
+      </Accordion>
+      <Button onClick={onSearch} variant="contained" color="primary">
+        Search
+      </Button>
+      <Button onClick={sendRestore} variant="outlined" color="secondary">
+        Reload
+      </Button>
       <SearchResult
         isOpen={isOpen}
         setIsOpen={setIsOpen}
