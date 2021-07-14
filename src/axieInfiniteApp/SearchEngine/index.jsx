@@ -14,7 +14,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import bodypartsMap from "../utils/calculateQuality/bodyPartsMap.json";
-import sendRestore from "../../utils/commonContentEvents";
+
 import fetchMarketplace from "../utils/fetchMarketplace";
 import styles from "./styles.module.css";
 import SearchResult from "./SearchResult";
@@ -209,9 +209,6 @@ const SearchEngine = () => {
       </Accordion>
       <Button onClick={onSearch} variant="contained" color="primary">
         Search
-      </Button>
-      <Button onClick={sendRestore} variant="outlined" color="secondary">
-        Reload
       </Button>
       <SearchResult
         isOpen={isOpen}

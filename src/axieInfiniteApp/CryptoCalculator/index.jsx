@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import BreedCalculator from "../BreedCalculator";
+import Link from "@material-ui/core/Link";
 
 import useFetchCoinPrice from "../utils/useFetchCoinPrice";
 
@@ -9,9 +11,6 @@ const useStyles = makeStyles({
   textFieldRoot: {
     width: "30%",
     marginRight: "9px",
-  },
-  inputProps: {
-    textAlign: "center",
   },
   svgRoot: {
     margin: "0 8px",
@@ -60,6 +59,7 @@ const CalcRow = ({ iconSrc, rate, onChange }) => {
 
 const CryptoCalculator = () => {
   const [partials, setPartials] = useState([NaN, NaN]);
+  const [isOpen, setIsOpen] = useState(false);
   const { axsPrice, slpPrice } = useFetchCoinPrice();
 
   const result = partials
@@ -105,6 +105,15 @@ const CryptoCalculator = () => {
           </span>
         </div>
       </div>
+      <Link component="button" variant="body2" onClick={() => setIsOpen(true)}>
+        Open breed calculator
+      </Link>
+      <BreedCalculator
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        axsPrice={axsPrice}
+        slpPrice={slpPrice}
+      />
     </div>
   );
 };

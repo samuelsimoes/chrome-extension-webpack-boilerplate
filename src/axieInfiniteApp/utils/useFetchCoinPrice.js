@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import fetchCoinPrice, { AXS_ID, SLP_ID } from "./utils/fetchCoinPrice";
+import fetchCoinPrice, { AXS_ID, SLP_ID } from "./fetchCoinPrice";
 
 const useFetchCoinPrice = () => {
   const [axsPrice, setAxsPrice] = useState(null);
