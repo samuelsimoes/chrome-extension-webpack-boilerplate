@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import TextField from "@material-ui/core/TextField";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
-
-import getBreedCost from "./../utils/getBreedCost";
 
 const useStyles = makeStyles({
   textFieldRoot: {
@@ -14,23 +12,13 @@ const useStyles = makeStyles({
   },
 });
 
-const BreedRow = ({ axsPrice, slpPrice, onChange, onRemove }) => {
-  const [breedA, setBreedA] = useState(0);
-  const [breedB, setBreedB] = useState(0);
-  const [result, setResult] = useState({});
-
-  useEffect(() => {
-    const cost = getBreedCost(breedA, breedB);
-    const usdCost = cost.axs * axsPrice + cost.slp * slpPrice;
-    const newResult = { ...cost, usd: usdCost.toFixed(2) };
-
-    setResult(newResult);
-    onChange(newResult);
-  }, [breedA, breedB, axsPrice, slpPrice]);
+const BreedRow = ({ breedA, breedB, onChange, onRemove }) => {
+  const setBreedA = (value) => onChange({ breedA: value });
+  const setBreedB = (value) => onChange({ breedB: value });
 
   const classes = useStyles();
   return (
-    <div>
+    <>
       <IconButton aria-label="delete" onClick={onRemove}>
         <DeleteIcon fontSize="small" />
       </IconButton>
@@ -61,8 +49,7 @@ const BreedRow = ({ axsPrice, slpPrice, onChange, onRemove }) => {
           root: classes.textFieldRoot,
         }}
       />
-      <span>{result.usd}</span>
-    </div>
+    </>
   );
 };
 
