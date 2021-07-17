@@ -195,6 +195,7 @@ const SearchEngine = () => {
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         axieMarket={axieMarket}
+        onRefresh={onSearch}
       />
     </div>
   );
