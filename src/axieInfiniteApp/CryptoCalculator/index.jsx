@@ -81,7 +81,7 @@ const CalcRow = ({ iconSrc, rate, onChange }) => {
     <div className={classes.container}>
       {isCriptoToFiat ? (
         <TextField
-          id="standard-basic"
+          autoComplete="off"
           value={amountCrypto}
           onChange={(e) => handleCryptoChange(e.target.value)}
           inputProps={{ min: 0, style: { textAlign: "center" } }}
@@ -131,7 +131,7 @@ const CalcRow = ({ iconSrc, rate, onChange }) => {
       ) : (
         <>
           <TextField
-            id="standard-basic"
+            autoComplete="off"
             value={amountFiat}
             onChange={(e) => handleFiatChange(e.target.value)}
             inputProps={{ min: 0, style: { textAlign: "center" } }}

@@ -23,7 +23,7 @@ const BreedRow = ({ breedA, breedB, onChange, onRemove }) => {
         <DeleteIcon fontSize="small" />
       </IconButton>
       <TextField
-        id="standard-basic"
+        autoComplete="off"
         value={breedA}
         onChange={(e) => setBreedA(e.target.value)}
         autoComplete={false}
@@ -37,7 +37,7 @@ const BreedRow = ({ breedA, breedB, onChange, onRemove }) => {
       />
       <FavoriteIcon fontSize="small" />
       <TextField
-        id="standard-basic"
+        autoComplete="off"
         autoComplete={false}
         value={breedB}
         onChange={(e) => setBreedB(e.target.value)}
