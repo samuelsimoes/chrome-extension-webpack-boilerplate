@@ -14,9 +14,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import bodypartsMap from "../utils/calculateQuality/bodyPartsMap.json";
-
 import fetchMarketplace from "../utils/fetchMarketplace";
-import styles from "./styles.module.css";
 import SearchResult from "./SearchResult";
 
 const queryMarket = async ({
@@ -40,23 +38,6 @@ const queryMarket = async ({
 
   callback(filterAxies);
 };
-
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
@@ -100,7 +81,7 @@ const SearchEngine = () => {
     });
 
   return (
-    <div style={{ width: "100%" }} className={styles.buttonsContainer}>
+    <div style={{ width: "100%" }}>
       <Typography id="discrete-slider" gutterBottom>
         Pureness: {pureness}
       </Typography>
