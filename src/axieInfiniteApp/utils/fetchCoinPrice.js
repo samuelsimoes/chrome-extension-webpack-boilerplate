@@ -26,5 +26,6 @@ const fetchCoinPriceMarket = async (coinId) => {
 
 export const AXS_ID = "axie-infinity";
 export const SLP_ID = "smooth-love-potion";
+export const ETH_ID = "ethereum";
 
 export default fetchCoinPriceMarket;

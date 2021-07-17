@@ -8,14 +8,19 @@ function formatResponse(res) {
     const {
       id,
       genes,
-      auction: { currentPriceUSD },
+      auction: { currentPriceUSD, currentPrice },
       image,
       breedCount,
     } = axie;
     const { quality } = calculateQuality(genes, axie.class);
 
+    const ethPrice = Number(currentPrice) / Math.pow(10, 18);
+    const ethRate = currentPriceUSD / ethPrice;
+
     return {
       id,
+      ethRate,
+      ethPrice,
       usdPrice: currentPriceUSD,
       quality: (quality * 100).toFixed(2),
       image,
@@ -29,6 +34,7 @@ export default function fetchMarketPage({
   pureness,
   classes,
   breed,
+  size,
   ...rest
 }) {
   return fetch("https://axieinfinity.com/graphql-server-v2/graphql", {
@@ -42,7 +48,7 @@ export default function fetchMarketPage({
         "query GetAxieBriefList($auctionType: AuctionType, $criteria: AxieSearchCriteria, $from: Int, $sort: SortBy, $size: Int, $owner: String) {\n  axies(auctionType: $auctionType, criteria: $criteria, from: $from, sort: $sort, size: $size, owner: $owner) {\n    total\n    results {\n      ...AxieBrief\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment AxieBrief on Axie {\n  id\n  genes\n  owner\n  name\n  stage\n  class\n  breedCount\n  image\n  title\n  stats {\n    ...AxieStats\n    __typename\n  }\n  battleInfo {\n    banned\n    __typename\n  }\n  auction {\n    currentPrice\n    currentPriceUSD\n    __typename\n  }\n  parts {\n    id\n    name\n    class\n    type\n    specialGenes\n    __typename\n  }\n  __typename\n}\nfragment AxieStats on AxieStats {\n  hp\n  speed\n  skill\n  morale\n  __typename\n}\n\n",
       variables: {
         from: 0,
-        size: 100,
+        size: size || 100,
         sort: "PriceAsc",
         auctionType: "Sale",
         owner: null,
