@@ -30,7 +30,7 @@ function formatResponse({ data }) {
   };
 }
 
-export default function fetchAxie({ axieId = "1709432" }) {
+export default function fetchAxie({ axieId }) {
   return fetch("https://axieinfinity.com/graphql-server-v2/graphql", {
     method: "post",
     headers: {

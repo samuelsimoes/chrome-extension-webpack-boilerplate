@@ -12,9 +12,13 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import IconButton from "@material-ui/core/IconButton";
+import Visibility from "@material-ui/icons/Visibility";
 
 import bodypartsMap from "../utils/calculateQuality/bodyPartsMap.json";
 import fetchMarketplace from "../utils/fetchMarketplace";
+import fetchAxie from "../utils/fetchAxie";
 import SearchResult from "./SearchResult";
 
 const queryMarket = async ({
@@ -52,6 +56,7 @@ const SearchEngine = () => {
   const [axieClass, setAxieClass] = useState([]);
   const [axieMarket, setAxieMarket] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [idAxie, setIdAxie] = useState("");
 
   const handlePureness = (event, newValue) => {
     setPureness(newValue);
@@ -78,6 +83,14 @@ const SearchEngine = () => {
       parts,
       axieClass,
       callback: handleOpen,
+    });
+
+  const onFetchAxie = () =>
+    fetchAxie({ axieId: idAxie }).then(({ queryExactParams }) => {
+      setParts(queryExactParams.parts);
+      setPureness(queryExactParams.pureness);
+      setAxieClass(queryExactParams.classes);
+      setBreed(queryExactParams.breed);
     });
 
   return (
@@ -134,6 +147,7 @@ const SearchEngine = () => {
             multiple
             id="checkboxes-tags-demo"
             options={bodyParts}
+            value={parts}
             disableCloseOnSelect
             getOptionLabel={(part) => part}
             onChange={(_, values) => setParts([...values])}
@@ -188,6 +202,29 @@ const SearchEngine = () => {
           />
         </AccordionDetails>
       </Accordion>
+      <div style={{ marginTop: "10px", marginBottom: "10px" }}>
+        <TextField
+          variant="outlined"
+          fullWidth
+          label="Axie ID"
+          autoComplete="off"
+          autoComplete={false}
+          value={idAxie}
+          onChange={(e) => setIdAxie(e.target.value)}
+          inputProps={{
+            style: { textAlign: "center" },
+          }}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton onClick={onFetchAxie}>
+                  <Visibility />
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
+      </div>
       <Button onClick={onSearch} variant="contained" color="primary">
         Search
       </Button>
