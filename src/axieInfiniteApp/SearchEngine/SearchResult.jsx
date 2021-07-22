@@ -11,6 +11,11 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import IconButton from "@material-ui/core/IconButton";
+import Visibility from "@material-ui/icons/Visibility";
+import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import TextField from "@material-ui/core/TextField";
 
 import CopyEthPrice from "./CopyPrice";
 
@@ -38,21 +43,21 @@ const useStyles = makeStyles({
 });
 
 const AutoRefresh = ({ onRefresh }) => {
-  const [isAutoRefresh, setIsAutoRefresh] = useState(false);
+  const [isAutoRefresh, setIsAutoRefresh] = useState(true);
   const [intervalId, setIntervalId] = useState(null);
-  const [remainingTime, setRemainingTime] = useState(25);
+  const [remainingTime, setRemainingTime] = useState(60);
 
   const regresiveCount = () =>
     setRemainingTime((prev) => {
       if (prev === 0) {
         onRefresh();
-        return 25;
+        return 60;
       }
       return Number(prev) - 1;
     });
 
   const handleToggle = (isChecked) => {
-    setRemainingTime(20);
+    setRemainingTime(60);
     setIsAutoRefresh(isChecked);
   };
 
@@ -84,7 +89,28 @@ const AutoRefresh = ({ onRefresh }) => {
 };
 
 const SearchResult = ({ isOpen, setIsOpen, axieMarket, onRefresh }) => {
+  const [idAxie, setIdAxie] = useState("");
+  const [isWatching, setIsWatching] = useState(false);
+  const [wasNotified, setWasNotified] = useState(false);
+  const [isReadyToSearch, setIsReadyToSearch] = useState(false);
   const classes = useStyles();
+
+  const handleWatch = () => {
+    setIsWatching((prev) => !prev);
+  };
+
+  const handleRefresh = () => {
+    onRefresh();
+  };
+
+  useEffect(() => {
+    if (!isOpen) {
+      setIdAxie("");
+      setIsReadyToSearch(false);
+      setIsWatching(false);
+      setWasNotified(false);
+    }
+  }, [isOpen]);
 
   return (
     <Dialog
@@ -95,7 +121,20 @@ const SearchResult = ({ isOpen, setIsOpen, axieMarket, onRefresh }) => {
     >
       <DialogContent classes={{ root: classes.root }}>
         <div className={classes.toolsContainer}>
-          <AutoRefresh onRefresh={onRefresh} />
+          <AutoRefresh onRefresh={handleRefresh} />
+          <TextField
+            variant="outlined"
+            fullWidth
+            disabled={isWatching}
+            label="Axie ID"
+            autoComplete="off"
+            autoComplete={false}
+            value={idAxie}
+            onChange={(e) => setIdAxie(e.target.value)}
+            inputProps={{
+              style: { textAlign: "center" },
+            }}
+          />
         </div>
         <TableContainer>
           <Table aria-label="simple table" size="small">
@@ -127,6 +166,9 @@ const SearchResult = ({ isOpen, setIsOpen, axieMarket, onRefresh }) => {
                       <Link
                         href={`https://marketplace.axieinfinity.com/axie/${id}`}
                         target="_blank"
+                        style={{
+                          background: idAxie === id ? "yellow" : "none",
+                        }}
                       >
                         {id}
                       </Link>

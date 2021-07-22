@@ -29,12 +29,13 @@ function formatResponse(res) {
   });
 }
 
-export default function fetchMarketPage({
+function fetchMarketPage({
   parts,
   pureness,
   classes,
   breed,
   size,
+  from,
   ...rest
 }) {
   return fetch("https://axieinfinity.com/graphql-server-v2/graphql", {
@@ -47,7 +48,7 @@ export default function fetchMarketPage({
       query:
         "query GetAxieBriefList($auctionType: AuctionType, $criteria: AxieSearchCriteria, $from: Int, $sort: SortBy, $size: Int, $owner: String) {\n  axies(auctionType: $auctionType, criteria: $criteria, from: $from, sort: $sort, size: $size, owner: $owner) {\n    total\n    results {\n      ...AxieBrief\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment AxieBrief on Axie {\n  id\n  genes\n  owner\n  name\n  stage\n  class\n  breedCount\n  image\n  title\n  stats {\n    ...AxieStats\n    __typename\n  }\n  battleInfo {\n    banned\n    __typename\n  }\n  auction {\n    currentPrice\n    currentPriceUSD\n    __typename\n  }\n  parts {\n    id\n    name\n    class\n    type\n    specialGenes\n    __typename\n  }\n  __typename\n}\nfragment AxieStats on AxieStats {\n  hp\n  speed\n  skill\n  morale\n  __typename\n}\n\n",
       variables: {
-        from: 0,
+        from: from || 0,
         size: size || 100,
         sort: "PriceAsc",
         auctionType: "Sale",
@@ -75,3 +76,20 @@ export default function fetchMarketPage({
     .then((res) => res.json())
     .then(formatResponse);
 }
+
+export default async (props) => {
+  let result = await Promise.all([
+    fetchMarketPage({ ...props, from: 0 * 100 }),
+    fetchMarketPage({ ...props, from: 1 * 100 }),
+    fetchMarketPage({ ...props, from: 2 * 100 }),
+    fetchMarketPage({ ...props, from: 3 * 100 }),
+    fetchMarketPage({ ...props, from: 4 * 100 }),
+    fetchMarketPage({ ...props, from: 5 * 100 }),
+    fetchMarketPage({ ...props, from: 6 * 100 }),
+    fetchMarketPage({ ...props, from: 7 * 100 }),
+    fetchMarketPage({ ...props, from: 8 * 100 }),
+    fetchMarketPage({ ...props, from: 9 * 100 }),
+  ]);
+
+  return result.reduce((acc, curr) => [...acc, ...curr], []);
+};

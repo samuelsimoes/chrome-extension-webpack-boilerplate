@@ -19,7 +19,7 @@ const AxieInfiniteApp = () => {
   const clasess = useStyles();
   return (
     <div className={clasess.container}>
-      <Accordion defaultExpanded={true}>
+      <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography>Crypto Calculator</Typography>
         </AccordionSummary>
