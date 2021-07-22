@@ -57,18 +57,6 @@ const SearchEngine = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [idAxie, setIdAxie] = useState("");
 
-  const handlePureness = (event, newValue) => {
-    setPureness(newValue);
-  };
-
-  const handleChangeRange = (event, newValue) => {
-    setPurenessRange(newValue);
-  };
-
-  const handleBreed = (event, newValue) => {
-    setBreed(newValue);
-  };
-
   const handleOpen = (axies) => {
     setAxieMarket(axies);
     setIsOpen(true);
@@ -93,7 +81,7 @@ const SearchEngine = () => {
     });
 
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%", padding: "15px" }}>
       <Typography id="discrete-slider" gutterBottom>
         Pureness: {pureness}
       </Typography>
@@ -102,7 +90,7 @@ const SearchEngine = () => {
         getAriaValueText={(value) => value}
         aria-labelledby="discrete-slider"
         valueLabelDisplay="auto"
-        onChange={handlePureness}
+        onChange={(_, newValue) => setPureness(newValue)}
         value={pureness}
         step={1}
         marks
@@ -114,7 +102,7 @@ const SearchEngine = () => {
       </Typography>
       <Slider
         value={purenessRange}
-        onChange={handleChangeRange}
+        onChange={(_, newValue) => setPurenessRange(newValue)}
         valueLabelDisplay="auto"
         aria-labelledby="range-slider"
         getAriaValueText={(value) => `${value}%`}
@@ -126,7 +114,7 @@ const SearchEngine = () => {
         getAriaValueText={(value) => value}
         aria-labelledby="discrete-slider"
         valueLabelDisplay="auto"
-        onChange={handleBreed}
+        onChange={(_, newValue) => setBreed(newValue)}
         value={breed}
         step={1}
         marks
