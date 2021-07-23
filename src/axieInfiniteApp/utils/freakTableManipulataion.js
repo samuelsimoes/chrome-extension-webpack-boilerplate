@@ -1,14 +1,7 @@
-import Sortable from "sortablejs";
+import makeGridSortable from "./makeGridSortable";
 
 export default () => {
-  const container =
-    document.querySelector(".axie-card").parentElement.parentElement
-      .parentElement;
-
-  Sortable.create(container, {
-    handle: ".axie-card",
-    animation: 150,
-  });
+  makeGridSortable();
 
   document.querySelectorAll(".axie-card").forEach((axieCard) => {
     const freakTable = axieCard.querySelector("table");
@@ -18,6 +11,7 @@ export default () => {
     genes.style.display = "block";
     genes.style.position = "unset";
     genes.style["font-size"] = "12px";
+    genes.style["margin-bottom"] = "8px";
     genes.style.padding = "0";
     genes.style.border = "none";
     genes.style.background = "none";

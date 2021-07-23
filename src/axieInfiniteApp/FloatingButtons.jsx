@@ -12,6 +12,7 @@ import SearchResult from "./SearchEngine/SearchResult";
 import CryptoCalculator from "./CryptoCalculator";
 import { useInyectionContext } from "./context/InyectionContext";
 import freakTableManipulataion from "./utils/freakTableManipulataion";
+import makeGridSortable from "./utils/makeGridSortable";
 import Reload from "./Reload";
 
 const useStyles = makeStyles({
@@ -79,18 +80,22 @@ export default () => {
   const { setInyect } = useInyectionContext();
   const clasess = useStyles();
 
+  const onInyect = () => {
+    makeGridSortable();
+    setInyect(true);
+  };
+
   return (
     <div className={clasess.container}>
       <Fab
-        onClick={() => {}}
+        onClick={freakTableManipulataion}
         classes={{ root: clasess.fabRoot }}
         color="primary"
-        onClick={freakTableManipulataion}
       >
         <GridOnIcon />
       </Fab>
       <Fab
-        onClick={() => setInyect(true)}
+        onClick={onInyect}
         classes={{ root: clasess.fabRoot }}
         color="primary"
       >
