@@ -16,7 +16,7 @@ const CryptoCalculator = () => {
     .toFixed(2);
 
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
       <CalculatorRow
         iconSrc="https://assets.coingecko.com/coins/images/13029/thumb/axie_infinity_logo.png?1604471082"
         rate={axsPrice}

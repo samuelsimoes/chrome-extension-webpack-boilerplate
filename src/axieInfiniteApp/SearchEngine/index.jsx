@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
@@ -24,8 +24,8 @@ const checkedIcon = <CheckBoxIcon fontSize="small" />;
 const bodyParts = Object.values(bodypartsMap).map(({ partId }) => partId);
 const axieClasses = ["Beast", "Bug", "Bird", "Plant", "Aquatic", "Reptile"];
 
-const SearchEngine = () => {
-  const [idAxie, setIdAxie] = useState("");
+const SearchEngine = ({ axieId }) => {
+  const [idAxie, setIdAxie] = useState(axieId);
   const {
     pureness,
     setPureness,
@@ -39,11 +39,20 @@ const SearchEngine = () => {
     setAxieClass,
     onSearch,
     onFetchAxie,
+    clearAll,
     isFetching,
   } = useSearchContext();
 
+  useEffect(() => {
+    if (axieId) {
+      onFetchAxie(axieId);
+    } else {
+      clearAll();
+    }
+  }, []);
+
   return (
-    <div style={{ width: "100%", padding: "15px" }}>
+    <div style={{ maxWidth: "375px", padding: "15px" }}>
       <Typography id="discrete-slider" gutterBottom>
         Pureness: {pureness}
       </Typography>
@@ -83,7 +92,7 @@ const SearchEngine = () => {
         min={0}
         max={7}
       />
-      <Accordion>
+      <Accordion defaultExpanded>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"

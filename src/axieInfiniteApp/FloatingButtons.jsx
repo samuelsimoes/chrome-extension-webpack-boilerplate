@@ -4,10 +4,14 @@ import Popover from "@material-ui/core/Popover";
 import Fab from "@material-ui/core/Fab";
 import SearchIcon from "@material-ui/icons/Search";
 import FunctionsIcon from "@material-ui/icons/Functions";
+import InputIcon from "@material-ui/icons/Input";
+import GridOnIcon from "@material-ui/icons/GridOn";
 
 import SearchEngine from "./SearchEngine";
 import SearchResult from "./SearchEngine/SearchResult";
 import CryptoCalculator from "./CryptoCalculator";
+import { useInyectionContext } from "./context/InyectionContext";
+import freakTableManipulataion from "./utils/freakTableManipulataion";
 import Reload from "./Reload";
 
 const useStyles = makeStyles({
@@ -72,17 +76,34 @@ const FloatingPopover = ({ icon, children }) => {
 };
 
 export default () => {
+  const { setInyect } = useInyectionContext();
   const clasess = useStyles();
+
   return (
     <div className={clasess.container}>
+      <Fab
+        onClick={() => {}}
+        classes={{ root: clasess.fabRoot }}
+        color="primary"
+        onClick={freakTableManipulataion}
+      >
+        <GridOnIcon />
+      </Fab>
+      <Fab
+        onClick={() => setInyect(true)}
+        classes={{ root: clasess.fabRoot }}
+        color="primary"
+      >
+        <InputIcon />
+      </Fab>
       <FloatingPopover icon={<FunctionsIcon />}>
         <CryptoCalculator />
       </FloatingPopover>
       <FloatingPopover icon={<SearchIcon />}>
         <SearchEngine />
-        <SearchResult />
       </FloatingPopover>
-      <Reload />
+      {false && <Reload />}
+      <SearchResult />
     </div>
   );
 };

@@ -49,6 +49,16 @@ export const SearchProvider = ({ children }) => {
     setIsFetching(false);
   };
 
+  const clearAll = () => {
+    setPureness(6);
+    setPurenessRange([0, 100]);
+    setBreed([0, 7]);
+    setParts([]);
+    setAxieClass([]);
+    setAxieMarket([]);
+    setIsFetching(false);
+  };
+
   return (
     <SearchContext.Provider
       value={{
@@ -68,6 +78,7 @@ export const SearchProvider = ({ children }) => {
         setIsOpenModal,
         onSearch,
         onFetchAxie,
+        clearAll,
         isFetching,
       }}
     >
