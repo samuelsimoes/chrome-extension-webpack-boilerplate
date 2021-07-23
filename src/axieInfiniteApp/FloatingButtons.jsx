@@ -87,6 +87,12 @@ export default () => {
 
   return (
     <div className={clasess.container}>
+      <FloatingPopover icon={<SearchIcon />}>
+        <SearchEngine />
+      </FloatingPopover>
+      <FloatingPopover icon={<FunctionsIcon />}>
+        <CryptoCalculator />
+      </FloatingPopover>
       <Fab
         onClick={freakTableManipulataion}
         classes={{ root: clasess.fabRoot }}
@@ -101,12 +107,7 @@ export default () => {
       >
         <InputIcon />
       </Fab>
-      <FloatingPopover icon={<FunctionsIcon />}>
-        <CryptoCalculator />
-      </FloatingPopover>
-      <FloatingPopover icon={<SearchIcon />}>
-        <SearchEngine />
-      </FloatingPopover>
+
       {false && <Reload />}
       <SearchResult />
     </div>
