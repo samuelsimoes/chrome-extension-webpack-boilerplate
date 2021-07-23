@@ -14,33 +14,10 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import IconButton from "@material-ui/core/IconButton";
 import Visibility from "@material-ui/icons/Visibility";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
+import { useSearchContext } from "../context/SearchContext";
 import bodypartsMap from "../utils/calculateQuality/bodyPartsMap.json";
-import fetchMarketplace from "../utils/fetchMarketplace";
-import fetchAxie from "../utils/fetchAxie";
-import SearchResult from "./SearchResult";
-
-const queryMarket = async ({
-  pureness,
-  purenessRange,
-  breed,
-  parts,
-  axieClass,
-  callback,
-}) => {
-  const axies = await fetchMarketplace({
-    parts,
-    pureness,
-    classes: axieClass,
-    breed,
-  });
-
-  const filterAxies = axies.filter(
-    ({ quality }) => quality >= purenessRange[0] && quality <= purenessRange[1]
-  );
-
-  callback(filterAxies);
-};
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
@@ -48,37 +25,22 @@ const bodyParts = Object.values(bodypartsMap).map(({ partId }) => partId);
 const axieClasses = ["Beast", "Bug", "Bird", "Plant", "Aquatic", "Reptile"];
 
 const SearchEngine = () => {
-  const [pureness, setPureness] = useState(6);
-  const [purenessRange, setPurenessRange] = useState([0, 100]);
-  const [breed, setBreed] = useState([0, 7]);
-  const [parts, setParts] = useState([]);
-  const [axieClass, setAxieClass] = useState([]);
-  const [axieMarket, setAxieMarket] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
   const [idAxie, setIdAxie] = useState("");
-
-  const handleOpen = (axies) => {
-    setAxieMarket(axies);
-    setIsOpen(true);
-  };
-
-  const onSearch = () =>
-    queryMarket({
-      pureness,
-      purenessRange,
-      breed,
-      parts,
-      axieClass,
-      callback: handleOpen,
-    });
-
-  const onFetchAxie = () =>
-    fetchAxie({ axieId: idAxie }).then(({ queryExactParams }) => {
-      setParts(queryExactParams.parts);
-      setPureness(queryExactParams.pureness);
-      setAxieClass(queryExactParams.classes);
-      setBreed(queryExactParams.breed);
-    });
+  const {
+    pureness,
+    setPureness,
+    purenessRange,
+    setPurenessRange,
+    breed,
+    setBreed,
+    parts,
+    setParts,
+    axieClass,
+    setAxieClass,
+    onSearch,
+    onFetchAxie,
+    isFetching,
+  } = useSearchContext();
 
   return (
     <div style={{ width: "100%", padding: "15px" }}>
@@ -163,6 +125,7 @@ const SearchEngine = () => {
             multiple
             id="checkboxes-tags-demo"
             options={axieClasses}
+            value={axieClass}
             disableCloseOnSelect
             getOptionLabel={(part) => part}
             onChange={(_, values) => setAxieClass([...values])}
@@ -204,7 +167,7 @@ const SearchEngine = () => {
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
-                <IconButton onClick={onFetchAxie}>
+                <IconButton onClick={() => onFetchAxie(idAxie)}>
                   <Visibility />
                 </IconButton>
               </InputAdornment>
@@ -212,15 +175,14 @@ const SearchEngine = () => {
           }}
         />
       </div>
-      <Button onClick={onSearch} variant="contained" color="primary">
-        Search
+      <Button
+        onClick={onSearch}
+        disabled={isFetching}
+        variant="contained"
+        color="primary"
+      >
+        {isFetching ? <CircularProgress /> : "Search"}
       </Button>
-      <SearchResult
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        axieMarket={axieMarket}
-        onRefresh={onSearch}
-      />
     </div>
   );
 };

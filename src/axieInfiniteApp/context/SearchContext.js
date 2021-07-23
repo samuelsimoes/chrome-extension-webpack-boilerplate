@@ -1,12 +1,76 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useContext } from "react";
+
+import fetchMarketplace from "../utils/fetchMarketplace";
+import fetchAxie from "../utils/fetchAxie";
 
 const SearchContext = createContext({});
 
+export const useSearchContext = () => useContext(SearchContext);
+
 export const SearchProvider = ({ children }) => {
-  const [open, isOpen] = useState(false);
+  const [pureness, setPureness] = useState(6);
+  const [purenessRange, setPurenessRange] = useState([0, 100]);
+  const [breed, setBreed] = useState([0, 7]);
+  const [parts, setParts] = useState([]);
+  const [axieClass, setAxieClass] = useState([]);
+  const [axieMarket, setAxieMarket] = useState([]);
+
+  const [isFetching, setIsFetching] = useState(false);
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const filterAxies = axieMarket.filter(
+    ({ quality }) => quality >= purenessRange[0] && quality <= purenessRange[1]
+  );
+
+  const onSearch = async () => {
+    setIsFetching(true);
+
+    const marketAxies = await fetchMarketplace({
+      parts,
+      pureness,
+      classes: axieClass,
+      breed,
+    });
+
+    setAxieMarket(marketAxies);
+    setIsOpenModal(true);
+    setIsFetching(false);
+  };
+
+  const onFetchAxie = async (axieId) => {
+    setIsFetching(true);
+
+    const { queryExactParams } = await fetchAxie({ axieId });
+
+    setParts(queryExactParams.parts);
+    setPureness(queryExactParams.pureness);
+    setAxieClass(queryExactParams.classes);
+    setBreed(queryExactParams.breed);
+    setIsFetching(false);
+  };
 
   return (
-    <SearchContext.Provider value={{ open, isOpen }}>
+    <SearchContext.Provider
+      value={{
+        pureness,
+        setPureness,
+        purenessRange,
+        setPurenessRange,
+        breed,
+        setBreed,
+        parts,
+        setParts,
+        axieClass,
+        setAxieClass,
+        axieMarket: filterAxies,
+        setAxieMarket,
+        isOpenModal,
+        setIsOpenModal,
+        onSearch,
+        onFetchAxie,
+        isFetching,
+      }}
+    >
       {children}
     </SearchContext.Provider>
   );

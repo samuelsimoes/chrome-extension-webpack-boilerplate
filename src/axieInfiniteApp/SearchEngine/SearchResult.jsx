@@ -13,6 +13,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
 import TextField from "@material-ui/core/TextField";
 
+import { useSearchContext } from "../context/SearchContext";
 import CopyEthPrice from "./CopyPrice";
 
 const useStyles = makeStyles({
@@ -84,25 +85,24 @@ const AutoRefresh = ({ onRefresh }) => {
   );
 };
 
-const SearchResult = ({ isOpen, setIsOpen, axieMarket, onRefresh }) => {
+const SearchResult = () => {
+  const { axieMarket, isOpenModal, setIsOpenModal, onSearch } =
+    useSearchContext();
+
   const [idAxie, setIdAxie] = useState("");
 
   const classes = useStyles();
 
-  const handleRefresh = () => {
-    onRefresh();
-  };
-
   return (
     <Dialog
-      onClose={() => setIsOpen(false)}
+      onClose={() => setIsOpenModal(false)}
       aria-labelledby="simple-dialog-title"
-      open={isOpen}
+      open={isOpenModal}
       maxWidth="lg"
     >
       <DialogContent classes={{ root: classes.root }}>
         <div className={classes.toolsContainer}>
-          <AutoRefresh onRefresh={handleRefresh} />
+          <AutoRefresh onRefresh={onSearch} />
           <TextField
             variant="outlined"
             fullWidth

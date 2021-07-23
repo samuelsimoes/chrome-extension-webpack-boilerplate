@@ -78,7 +78,7 @@ function fetchMarketPage({
 }
 
 export default async (props) => {
-  let result = await Promise.all([
+  let response = await Promise.all([
     fetchMarketPage({ ...props, from: 0 * 100 }),
     fetchMarketPage({ ...props, from: 1 * 100 }),
     fetchMarketPage({ ...props, from: 2 * 100 }),
@@ -91,5 +91,5 @@ export default async (props) => {
     fetchMarketPage({ ...props, from: 9 * 100 }),
   ]);
 
-  return result.reduce((acc, curr) => [...acc, ...curr], []);
+  return response.flat();
 };
