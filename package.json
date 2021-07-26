@@ -1,12 +1,15 @@
 {
-  "name": "chrome-extension-webpack",
+  "name": "carespace-virtual-cam",
   "version": "0.0.1",
-  "description": "A boilerplate to chrome extension with webpack",
+  "description": "Carespace Virtualcam Chromium extension",
   "scripts": {
     "build": "node utils/build.js",
     "start": "node utils/webserver.js"
   },
   "devDependencies": {
+    "@tensorflow-models/posenet": "^2.2.2",
+    "@tensorflow/tfjs": "^3.7.0",
+    "@tensorflow/tfjs-backend-webgl": "^3.7.0",
     "clean-webpack-plugin": "3.0.0",
     "copy-webpack-plugin": "5.0.5",
     "css-loader": "3.2.0",
