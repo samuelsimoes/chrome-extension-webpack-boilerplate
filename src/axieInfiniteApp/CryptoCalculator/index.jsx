@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "@material-ui/core/Link";
 
 import BreedCalculator from "../BreedCalculator";
+import Simulator from "../Simulator";
 import Reload from "../Reload";
 import useFetchCoinPrice from "../utils/useFetchCoinPrice";
 import CalculatorRow from "./CalculatorRow";
@@ -9,6 +10,7 @@ import CalculatorRow from "./CalculatorRow";
 const CryptoCalculator = () => {
   const [partials, setPartials] = useState([NaN, NaN, NaN]);
   const [isOpen, setIsOpen] = useState(false);
+  const [openStrategy, setOpenStrategy] = useState(false);
   const { axsPrice, slpPrice, ethPrice } = useFetchCoinPrice();
 
   const result = partials
@@ -66,14 +68,32 @@ const CryptoCalculator = () => {
           </span>
         </div>
       </div>
-      <Link component="button" variant="body2" onClick={() => setIsOpen(true)}>
-        Open breed calculator
-      </Link>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <Link
+          component="button"
+          variant="body2"
+          onClick={() => setIsOpen(true)}
+        >
+          Breed calculator
+        </Link>
+        <Link
+          component="button"
+          variant="body2"
+          onClick={() => setOpenStrategy(true)}
+        >
+          Strategy simulator
+        </Link>
+      </div>
       <BreedCalculator
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         axsPrice={axsPrice}
         slpPrice={slpPrice}
+      />
+      <Simulator
+        open={openStrategy}
+        handleClose={() => setOpenStrategy(false)}
+        rates={{ axsPrice, slpPrice, ethPrice }}
       />
       {false && <Reload />}
     </div>

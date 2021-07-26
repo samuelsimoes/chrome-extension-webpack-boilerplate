@@ -1,34 +1,5 @@
 import calculateQuality from "./calculateQuality";
 
-// Normalize the response
-function formatResponse(res) {
-  const { results } = res.data.axies;
-
-  return results.map((axie) => {
-    const {
-      id,
-      genes,
-      auction: { currentPriceUSD, currentPrice },
-      image,
-      breedCount,
-    } = axie;
-    const { quality } = calculateQuality(genes, axie.class);
-
-    const ethPrice = Number(currentPrice) / Math.pow(10, 18);
-    const ethRate = currentPriceUSD / ethPrice;
-
-    return {
-      id,
-      ethRate,
-      ethPrice,
-      usdPrice: currentPriceUSD,
-      quality: (quality * 100).toFixed(2),
-      image,
-      breedCount,
-    };
-  });
-}
-
 function fetchMarketPage({
   parts,
   pureness,
@@ -72,24 +43,62 @@ function fetchMarketPage({
         },
       },
     }),
-  })
-    .then((res) => res.json())
-    .then(formatResponse);
+  }).then((res) => res.json());
 }
 
-export default async (props) => {
-  let response = await Promise.all([
-    fetchMarketPage({ ...props, from: 0 * 100 }),
-    fetchMarketPage({ ...props, from: 1 * 100 }),
-    fetchMarketPage({ ...props, from: 2 * 100 }),
-    fetchMarketPage({ ...props, from: 3 * 100 }),
-    fetchMarketPage({ ...props, from: 4 * 100 }),
-    fetchMarketPage({ ...props, from: 5 * 100 }),
-    fetchMarketPage({ ...props, from: 6 * 100 }),
-    fetchMarketPage({ ...props, from: 7 * 100 }),
-    fetchMarketPage({ ...props, from: 8 * 100 }),
-    fetchMarketPage({ ...props, from: 9 * 100 }),
-  ]);
+// Normalize the response
+function formatResponse(res) {
+  const { results } = res.data.axies;
+  return results.map((axie) => {
+    const {
+      id,
+      genes,
+      auction: { currentPriceUSD, currentPrice },
+      image,
+      breedCount,
+    } = axie;
+    const { quality } = calculateQuality(genes, axie.class);
 
-  return response.flat();
+    const ethPrice = Number(currentPrice) / Math.pow(10, 18);
+    const ethRate = currentPriceUSD / ethPrice;
+
+    return {
+      id,
+      ethRate,
+      ethPrice,
+      usdPrice: currentPriceUSD,
+      quality: (quality * 100).toFixed(2),
+      image,
+      breedCount,
+    };
+  });
+}
+
+// Exported function
+export default async (props) => {
+  let firstResponse = await fetchMarketPage({ ...props, from: 0 * 100 });
+
+  const { total } = firstResponse.data.axies;
+  const amountOfPages = Math.trunc(Number(total) / 100);
+
+  let restOfPages = [];
+
+  if (amountOfPages > 1) {
+    const amountOfRequest = amountOfPages > 9 ? 9 : amountOfPages;
+
+    const responses = await Promise.all(
+      new Array(amountOfRequest)
+        .fill("1")
+        .map((_, index) =>
+          fetchMarketPage({ ...props, from: Number(index) * 100 }).then(
+            formatResponse
+          )
+        )
+    );
+
+    restOfPages = responses.flat();
+  }
+
+  const formatedFirstPage = formatResponse(firstResponse);
+  return [...formatedFirstPage, ...restOfPages];
 };

@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 
 import fetchMarketplace from "../utils/fetchMarketplace";
 import fetchAxie from "../utils/fetchAxie";
@@ -32,9 +32,9 @@ export const SearchProvider = ({ children }) => {
       breed,
     });
 
-    setAxieMarket(marketAxies);
     setIsOpenModal(true);
     setIsFetching(false);
+    setAxieMarket(marketAxies);
   };
 
   const onFetchAxie = async (axieId) => {
@@ -58,6 +58,12 @@ export const SearchProvider = ({ children }) => {
     setAxieMarket([]);
     setIsFetching(false);
   };
+
+  useEffect(() => {
+    if (!isOpenModal) {
+      setAxieMarket([]);
+    }
+  }, [isOpenModal]);
 
   return (
     <SearchContext.Provider

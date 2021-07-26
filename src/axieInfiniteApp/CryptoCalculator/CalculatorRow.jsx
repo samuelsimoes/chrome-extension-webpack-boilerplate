@@ -3,9 +3,9 @@ import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import IconButton from "@material-ui/core/IconButton";
-import Tooltip from "@material-ui/core/Tooltip";
 import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
+import FileCopyIcon from "@material-ui/icons/FileCopy";
 
 const useStyles = makeStyles({
   container: {
@@ -74,6 +74,9 @@ const CalculatorRow = ({ iconSrc, rate, onChange }) => {
 
   return (
     <div className={classes.container}>
+      <IconButton aria-label="delete" size="small" onClick={handleCopy}>
+        <FileCopyIcon fontSize="inherit" />
+      </IconButton>
       {isCriptoToFiat ? (
         <TextField
           autoComplete="off"
@@ -85,11 +88,9 @@ const CalculatorRow = ({ iconSrc, rate, onChange }) => {
           }}
         />
       ) : (
-        <Tooltip title="click to copy">
-          <Button onClick={handleCopy} className={classes.result}>
-            {amountCrypto}
-          </Button>
-        </Tooltip>
+        <Button onClick={() => {}} className={classes.result}>
+          {amountCrypto}
+        </Button>
       )}
       <img
         src={iconSrc}

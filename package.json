@@ -11,9 +11,11 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.60",
     "abi-decoder": "^2.4.0",
+    "array-move": "^3.0.1",
     "coingecko-api": "^1.0.10",
     "react": "16.12.0",
     "react-dom": "16.12.0",
+    "react-smooth-dnd": "^0.11.1",
     "sortablejs": "^1.14.0",
     "uuid": "^8.3.2"
   },

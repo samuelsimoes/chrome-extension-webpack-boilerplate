@@ -3,7 +3,7 @@ import calculateQuality from "./calculateQuality";
 // Normalize the response
 function formatResponse({ data }) {
   const { axie } = data;
-  const { id, genes, image, breedCount, parts, pureness } = axie;
+  const { id, genes, image, name, breedCount, parts, pureness } = axie;
   const { quality } = calculateQuality(genes, axie.class);
 
   const queryExactParams = {
@@ -22,6 +22,7 @@ function formatResponse({ data }) {
     quality: (quality * 100).toFixed(2),
     image,
     parts,
+    name,
     type: axie.class,
     breedCount,
     pureness,

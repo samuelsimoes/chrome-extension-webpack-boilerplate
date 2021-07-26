@@ -12,6 +12,7 @@ import TableRow from "@material-ui/core/TableRow";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
 import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 import { useSearchContext } from "../context/SearchContext";
 import CopyEthPrice from "./CopyPrice";
@@ -36,6 +37,10 @@ const useStyles = makeStyles({
     color: "white !important",
     borderBottom: "none",
     textAlign: "center",
+  },
+  buttonRoot: {
+    display: "block",
+    margin: "15px auto",
   },
 });
 
@@ -90,6 +95,7 @@ const SearchResult = () => {
     useSearchContext();
 
   const [idAxie, setIdAxie] = useState("");
+  const [slice, setSlice] = useState(50);
 
   const classes = useStyles();
 
@@ -135,50 +141,69 @@ const SearchResult = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {axieMarket.map(
-                ({ id, usdPrice, ethPrice, ethRate, quality, breedCount }) => (
-                  <TableRow key={id}>
-                    <TableCell
-                      classes={{ root: classes.tableCell }}
-                      align="right"
-                    >
-                      {" "}
-                      <Link
-                        href={`https://marketplace.axieinfinity.com/axie/${id}`}
-                        target="_blank"
-                        style={{
-                          background: idAxie === id ? "yellow" : "none",
-                        }}
+              {axieMarket
+                .slice(0, slice)
+                .map(
+                  ({
+                    id,
+                    usdPrice,
+                    ethPrice,
+                    ethRate,
+                    quality,
+                    breedCount,
+                  }) => (
+                    <TableRow key={id}>
+                      <TableCell
+                        classes={{ root: classes.tableCell }}
+                        align="right"
                       >
-                        {id}
-                      </Link>
-                    </TableCell>
+                        {" "}
+                        <Link
+                          href={`https://marketplace.axieinfinity.com/axie/${id}`}
+                          target="_blank"
+                          style={{
+                            background: idAxie === id ? "yellow" : "none",
+                          }}
+                        >
+                          {id}
+                        </Link>
+                      </TableCell>
 
-                    <TableCell
-                      classes={{ root: classes.tableCell }}
-                      align="right"
-                    >
-                      {breedCount}/7
-                    </TableCell>
-                    <TableCell
-                      classes={{ root: classes.tableCell }}
-                      align="right"
-                    >
-                      {usdPrice} USD{" "}
-                      <CopyEthPrice ethPrice={ethPrice} ethRate={ethRate} />
-                    </TableCell>
-                    <TableCell
-                      classes={{ root: classes.tableCell }}
-                      align="right"
-                    >
-                      {quality}%
-                    </TableCell>
-                  </TableRow>
-                )
-              )}
+                      <TableCell
+                        classes={{ root: classes.tableCell }}
+                        align="right"
+                      >
+                        {breedCount}/7
+                      </TableCell>
+                      <TableCell
+                        classes={{ root: classes.tableCell }}
+                        align="right"
+                      >
+                        {usdPrice} USD{" "}
+                        <CopyEthPrice ethPrice={ethPrice} ethRate={ethRate} />
+                      </TableCell>
+                      <TableCell
+                        classes={{ root: classes.tableCell }}
+                        align="right"
+                      >
+                        {quality}%
+                      </TableCell>
+                    </TableRow>
+                  )
+                )}
             </TableBody>
           </Table>
         </TableContainer>
+        <Button
+          onClick={() => setSlice((p) => Number(p) + 50)}
+          size="large"
+          color="primary"
+          variant="contained"
+          classes={{ root: classes.buttonRoot }}
+          disabled={!axieMarket || slice >= axieMarket.length}
+        >
+          See 50 more results
+        </Button>
       </DialogContent>
     </Dialog>
   );

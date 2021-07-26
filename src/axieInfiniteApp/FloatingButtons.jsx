@@ -6,7 +6,6 @@ import SearchIcon from "@material-ui/icons/Search";
 import FunctionsIcon from "@material-ui/icons/Functions";
 import InputIcon from "@material-ui/icons/Input";
 import GridOnIcon from "@material-ui/icons/GridOn";
-
 import SearchEngine from "./SearchEngine";
 import SearchResult from "./SearchEngine/SearchResult";
 import CryptoCalculator from "./CryptoCalculator";
@@ -107,7 +106,6 @@ export default () => {
       >
         <InputIcon />
       </Fab>
-
       {false && <Reload />}
       <SearchResult />
     </div>
