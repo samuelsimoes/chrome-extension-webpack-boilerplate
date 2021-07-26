@@ -5,7 +5,6 @@ function monkeyPatchMediaDevices() {
 
   MediaDevices.prototype.enumerateDevices = async function () {
     const res = await enumerateDevicesFn.call(navigator.mediaDevices);
-    // We could add "Virtual VHS" or "Virtual Median Filter" and map devices with filters.
     res.push({
       deviceId: 'virtual',
       groupID: 'uh',
@@ -40,7 +39,6 @@ function monkeyPatchMediaDevices() {
           constraints
         );
         if (res) {
-          // const filter = new FilterStream(res, shader);
           const filter = new PosenetStream(res);
           return filter.outputStream;
         }

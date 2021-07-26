@@ -9,7 +9,7 @@ class PosenetStream {
     const canvas = document.createElement('canvas');
     this.canvas = canvas;
 
-    this.renderer = new PosenetRenderer(this.canvas, video);
+    this.renderer = new PosenetRenderer(canvas, video);
 
     video.addEventListener('playing', () => {
       // Use a 2D Canvas.
@@ -18,7 +18,7 @@ class PosenetStream {
 
       // Use a WebGL Renderer.
       console.log('playing');
-      this.renderer.setSize(this.video.videoWidth, this.video.videoHeight);
+      // this.renderer.setSize(this.video.videoWidth, this.video.videoHeight);
       //this.update();
       this.renderer.render();
     });

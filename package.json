@@ -1,7 +1,7 @@
 {
   "name": "carespace-virtual-cam",
   "version": "0.0.1",
-  "description": "Carespace Virtual Cam Chromium extension",
+  "description": "Carespace Virtualcam Chromium extension",
   "scripts": {
     "build": "node utils/build.js",
     "start": "node utils/webserver.js"

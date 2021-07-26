@@ -1,10 +1,11 @@
 import { drawKeyPoints, drawSkeleton } from './posenet-utils.js';
 import '@tensorflow/tfjs-backend-webgl';
 import * as posenet from '@tensorflow-models/posenet';
+
 const defaultConfig = {
   videoWidth: 1320,
   videoHeight: 762,
-  flipHorizontal: true,
+  flipHorizontal: false,
   algorithm: 'single-pose',
   architecture: 'MobileNetV1',
   showVideo: true,
@@ -49,12 +50,6 @@ class PosenetRenderer {
     this.poseDetectionFrame(canvasContext);
   }
 
-  setSize(w, h) {
-    console.log('setSize', w, h);
-    /*   this.canvas.width = w;
-    this.canvas.height = h; */
-  }
-
   render() {
     this.startDetection();
   }
@@ -97,7 +92,7 @@ class PosenetRenderer {
           break;
         }
         case 'single-pose': {
-          const pose = await posenetModel.estimateSinglePose(this.video, {
+          const pose = await posenetModel.estimateSinglePose(this.canvas, {
             imageScaleFactor,
             flipHorizontal,
             outputStride,
@@ -113,8 +108,8 @@ class PosenetRenderer {
 
       if (showVideo) {
         canvasContext.save();
-        canvasContext.scale(-1, 1);
-        canvasContext.translate(-videoWidth, 0);
+      /*   canvasContext.scale(-1, 1);
+        canvasContext.translate(-videoWidth, 0); */
         canvasContext.drawImage(this.video, 0, 0, videoWidth, videoHeight);
         canvasContext.fillStyle = '#ff00ff';
         canvasContext.textBaseline = 'top';
