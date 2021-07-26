@@ -15,10 +15,6 @@
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "content_scripts": [
     {
-      "matches": ["https://*.explorer.roninchain.com/*"],
-      "js": ["roninChainContent.bundle.js"]
-    },
-    {
       "matches": ["https://*.marketplace.axieinfinity.com/*"],
       "js": ["axieInfinityContent.bundle.js"]
     }

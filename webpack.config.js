@@ -35,13 +35,6 @@ var options = {
     popup: path.join(__dirname, "src", "js", "popup.js"),
     options: path.join(__dirname, "src", "js", "options.js"),
     background: path.join(__dirname, "src", "js", "background.js"),
-    roninChainContent: path.join(
-      __dirname,
-      "src",
-      "js",
-      "contentScripts",
-      "roninChainContent.jsx"
-    ),
     axieInfinityContent: path.join(
       __dirname,
       "src",
