@@ -5,7 +5,7 @@ import Fab from "@material-ui/core/Fab";
 import SearchIcon from "@material-ui/icons/Search";
 import FunctionsIcon from "@material-ui/icons/Functions";
 import InputIcon from "@material-ui/icons/Input";
-import GridOnIcon from "@material-ui/icons/GridOn";
+
 import SearchEngine from "./SearchEngine";
 import SearchResult from "./SearchEngine/SearchResult";
 import CryptoCalculator from "./CryptoCalculator";
@@ -79,11 +79,6 @@ export default () => {
   const { setInyect } = useInyectionContext();
   const clasess = useStyles();
 
-  const onInyect = () => {
-    makeGridSortable();
-    setInyect(true);
-  };
-
   return (
     <div className={clasess.container}>
       <FloatingPopover icon={<SearchIcon />}>
@@ -92,20 +87,6 @@ export default () => {
       <FloatingPopover icon={<FunctionsIcon />}>
         <CryptoCalculator />
       </FloatingPopover>
-      <Fab
-        onClick={freakTableManipulataion}
-        classes={{ root: clasess.fabRoot }}
-        color="primary"
-      >
-        <GridOnIcon />
-      </Fab>
-      <Fab
-        onClick={onInyect}
-        classes={{ root: clasess.fabRoot }}
-        color="primary"
-      >
-        <InputIcon />
-      </Fab>
       {false && <Reload />}
       <SearchResult />
     </div>

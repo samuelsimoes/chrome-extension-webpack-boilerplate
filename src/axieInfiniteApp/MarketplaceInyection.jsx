@@ -1,14 +1,18 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import GridOnIcon from "@material-ui/icons/GridOn";
 import Popover from "@material-ui/core/Popover";
 import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
+import Tooltip from "@material-ui/core/Tooltip";
 
 import { useInyectionContext } from "./context/InyectionContext";
 import wrapIntoPortal from "./utils/wrapIntoPortal";
 import SearchEngine from "./SearchEngine";
+import { debounce } from "@material-ui/core";
+import makeGridSortable from "./utils/makeGridSortable";
+import freakTableManipulataion from "./utils/freakTableManipulataion";
 
-const ButtonPopover = ({ children }) => {
+const ButtonPopover = ({ tooltipTitle, children }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -24,9 +28,11 @@ const ButtonPopover = ({ children }) => {
 
   return (
     <>
-      <IconButton aria-label="delete" onClick={handleClick} size="small">
-        <SearchIcon fontSize="small" style={{ color: "white" }} />
-      </IconButton>
+      <Tooltip title={tooltipTitle}>
+        <IconButton aria-label="delete" onClick={handleClick} size="small">
+          <SearchIcon fontSize="small" style={{ color: "white" }} />
+        </IconButton>
+      </Tooltip>
       <Popover
         id={id}
         open={open}
@@ -47,8 +53,25 @@ const ButtonPopover = ({ children }) => {
   );
 };
 
+var globalUrlVariable = "";
 const MarketplaceInyection = () => {
   const { inyect, setInyect } = useInyectionContext();
+
+  useEffect(() => {
+    const debouncedInyection = debounce(() => {
+      if (globalUrlVariable !== window.location.href) {
+        globalUrlVariable = window.location.href;
+        setInyect();
+        makeGridSortable();
+      }
+    }, 1.5 * 1000);
+
+    new MutationObserver(debouncedInyection).observe(document.body, {
+      attributes: false,
+      childList: true,
+      subtree: true,
+    });
+  }, []);
 
   return inyect ? (
     <>
@@ -61,9 +84,20 @@ const MarketplaceInyection = () => {
         const axieId = target.innerText.replace("#", "");
 
         const PortalElem = wrapIntoPortal(
-          <ButtonPopover onUnmount={() => setInyect(false)}>
-            <SearchEngine axieId={axieId} />
-          </ButtonPopover>,
+          <>
+            <Tooltip title="Show genes">
+              <IconButton
+                aria-label="delete"
+                onClick={() => freakTableManipulataion(elem)}
+                size="small"
+              >
+                <GridOnIcon fontSize="small" style={{ color: "white" }} />
+              </IconButton>
+            </Tooltip>
+            <ButtonPopover tooltipTitle="Search similars">
+              <SearchEngine axieId={axieId} />
+            </ButtonPopover>
+          </>,
           target
         );
 
