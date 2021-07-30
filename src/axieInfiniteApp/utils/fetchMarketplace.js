@@ -1,4 +1,4 @@
-import calculateQuality from "./calculateQuality";
+import calculateQuality, { getTraitsTable } from "./calculateQuality";
 
 function fetchMarketPage({
   parts,
@@ -57,7 +57,9 @@ function formatResponse(res) {
       image,
       breedCount,
     } = axie;
+
     const { quality } = calculateQuality(genes, axie.class);
+    const traits = getTraitsTable(genes);
 
     const ethPrice = Number(currentPrice) / Math.pow(10, 18);
     const ethRate = currentPriceUSD / ethPrice;
@@ -67,6 +69,7 @@ function formatResponse(res) {
       ethRate,
       ethPrice,
       usdPrice: currentPriceUSD,
+      traits,
       quality: (quality * 100).toFixed(2),
       image,
       breedCount,

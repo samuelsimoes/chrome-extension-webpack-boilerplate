@@ -240,4 +240,11 @@ const calculate = (genes, classType) => {
   return qp;
 };
 
+export const getTraitsTable = (genes) => {
+  const speGenes = genesToBin(BigInt(genes));
+  const { eyes, mouth, ears, horn, back, tail } = getTraits(speGenes);
+
+  return { eyes, mouth, ears, horn, back, tail };
+};
+
 export default calculate;

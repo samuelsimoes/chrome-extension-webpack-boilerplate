@@ -14,6 +14,7 @@ import Switch from "@material-ui/core/Switch";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
+import { GenesPopover } from "./GenesTable";
 import { useSearchContext } from "../context/SearchContext";
 import CopyEthPrice from "./CopyPrice";
 
@@ -32,6 +33,11 @@ const useStyles = makeStyles({
   },
   root: {
     background: "#242735",
+  },
+  puresnessCell: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   tableCell: {
     color: "white !important",
@@ -150,6 +156,7 @@ const SearchResult = () => {
                     ethPrice,
                     ethRate,
                     quality,
+                    traits,
                     breedCount,
                   }) => (
                     <TableRow key={id}>
@@ -157,7 +164,6 @@ const SearchResult = () => {
                         classes={{ root: classes.tableCell }}
                         align="right"
                       >
-                        {" "}
                         <Link
                           href={`https://marketplace.axieinfinity.com/axie/${id}`}
                           target="_blank"
@@ -184,9 +190,11 @@ const SearchResult = () => {
                       </TableCell>
                       <TableCell
                         classes={{ root: classes.tableCell }}
+                        className={classes.puresnessCell}
                         align="right"
                       >
-                        {quality}%
+                        <GenesPopover traits={traits} />
+                        <span>{quality}%</span>
                       </TableCell>
                     </TableRow>
                   )
