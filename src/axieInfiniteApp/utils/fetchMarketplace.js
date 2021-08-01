@@ -1,5 +1,7 @@
 import calculateQuality, { getTraitsTable } from "./calculateQuality";
 
+export const STAGE_EGG = 1;
+
 function fetchMarketPage({
   parts,
   pureness,
@@ -17,7 +19,7 @@ function fetchMarketPage({
     body: JSON.stringify({
       operationName: "GetAxieBriefList",
       query:
-        "query GetAxieBriefList($auctionType: AuctionType, $criteria: AxieSearchCriteria, $from: Int, $sort: SortBy, $size: Int, $owner: String) {\n  axies(auctionType: $auctionType, criteria: $criteria, from: $from, sort: $sort, size: $size, owner: $owner) {\n    total\n    results {\n      ...AxieBrief\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment AxieBrief on Axie {\n  id\n  genes\n  owner\n  name\n  stage\n  class\n  breedCount\n  image\n  title\n  stats {\n    ...AxieStats\n    __typename\n  }\n  battleInfo {\n    banned\n    __typename\n  }\n  auction {\n    currentPrice\n    currentPriceUSD\n    __typename\n  }\n  parts {\n    id\n    name\n    class\n    type\n    specialGenes\n    __typename\n  }\n  __typename\n}\nfragment AxieStats on AxieStats {\n  hp\n  speed\n  skill\n  morale\n  __typename\n}\n\n",
+        "query GetAxieBriefList($auctionType: AuctionType, $criteria: AxieSearchCriteria, $from: Int, $sort: SortBy, $size: Int, $owner: String) {\n  axies(auctionType: $auctionType, criteria: $criteria, from: $from, sort: $sort, size: $size, owner: $owner) {\n    total\n    results {\n      ...AxieBrief\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment AxieBrief on Axie {\n  id\n  genes\n  owner\n  name\n  stage\n  class\n sireId\n  sireClass\n  matronId\n  matronClass\n breedCount\n  image\n  title\n  stats {\n    ...AxieStats\n    __typename\n  }\n  battleInfo {\n    banned\n    __typename\n  }\n  auction {\n    currentPrice\n    currentPriceUSD\n    __typename\n  }\n  parts {\n    id\n    name\n    class\n    type\n    specialGenes\n    __typename\n  }\n  __typename\n}\nfragment AxieStats on AxieStats {\n  hp\n  speed\n  skill\n  morale\n  __typename\n}\n\n",
       variables: {
         from: from || 0,
         size: size || 100,
@@ -55,10 +57,17 @@ function formatResponse(res) {
       genes,
       auction: { currentPriceUSD, currentPrice },
       image,
+      stage,
       breedCount,
+      sireId,
+      sireClass,
+      matronId,
+      matronClass,
     } = axie;
 
-    const { quality } = calculateQuality(genes, axie.class);
+    const { quality } =
+      stage !== STAGE_EGG ? calculateQuality(genes, axie.class) : NaN;
+
     const traits = getTraitsTable(genes);
 
     const ethPrice = Number(currentPrice) / Math.pow(10, 18);
@@ -68,11 +77,16 @@ function formatResponse(res) {
       id,
       ethRate,
       ethPrice,
+      stage,
       usdPrice: currentPriceUSD,
       traits,
       quality: (quality * 100).toFixed(2),
       image,
       breedCount,
+      sireId,
+      sireClass,
+      matronId,
+      matronClass,
     };
   });
 }
@@ -85,7 +99,6 @@ export default async (props) => {
   const amountOfPages = Math.trunc(Number(total) / 100);
 
   let restOfPages = [];
-
   if (amountOfPages > 1) {
     const amountOfRequest = amountOfPages > 9 ? 9 : amountOfPages;
 

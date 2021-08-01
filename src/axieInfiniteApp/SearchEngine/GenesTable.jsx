@@ -85,7 +85,7 @@ const GenesTable = ({ traits }) => {
   );
 };
 
-export const GenesPopover = ({ traits }) => {
+export const CustomPopover = ({ children }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const classes = useStyles();
 
@@ -130,10 +130,16 @@ export const GenesPopover = ({ traits }) => {
         onClose={handlePopoverClose}
         disableRestoreFocus
       >
-        <GenesTable traits={traits} />
+        {children}
       </Popover>
     </>
   );
 };
+
+export const GenesPopover = ({ traits }) => (
+  <CustomPopover>
+    <GenesTable traits={traits} />
+  </CustomPopover>
+);
 
 export default GenesTable;

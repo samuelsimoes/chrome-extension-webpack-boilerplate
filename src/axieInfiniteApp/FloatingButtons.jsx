@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Popover from "@material-ui/core/Popover";
 import Fab from "@material-ui/core/Fab";
 import SearchIcon from "@material-ui/icons/Search";
 import FunctionsIcon from "@material-ui/icons/Functions";
-import InputIcon from "@material-ui/icons/Input";
+import Button from "@material-ui/core/Button";
+import ChildFriendlyIcon from "@material-ui/icons/ChildFriendly";
 
 import SearchEngine from "./SearchEngine";
 import SearchResult from "./SearchEngine/SearchResult";
+import EggsSearchResult from "./SearchEngine/EggsSearchResult";
 import CryptoCalculator from "./CryptoCalculator";
-import { useInyectionContext } from "./context/InyectionContext";
-import freakTableManipulataion from "./utils/freakTableManipulataion";
-import makeGridSortable from "./utils/makeGridSortable";
 import Reload from "./Reload";
 
 const useStyles = makeStyles({
@@ -76,7 +75,7 @@ const FloatingPopover = ({ icon, children }) => {
 };
 
 export default () => {
-  const { setInyect } = useInyectionContext();
+  const [isOpen, setIsOpen] = useState(false);
   const clasess = useStyles();
 
   return (
@@ -89,6 +88,15 @@ export default () => {
       </FloatingPopover>
       {false && <Reload />}
       <SearchResult />
+      <EggsSearchResult isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Fab
+        classes={{ root: clasess.fabRoot }}
+        color="primary"
+        aria-label="add"
+        onClick={() => setIsOpen(true)}
+      >
+        <ChildFriendlyIcon />
+      </Fab>
     </div>
   );
 };
