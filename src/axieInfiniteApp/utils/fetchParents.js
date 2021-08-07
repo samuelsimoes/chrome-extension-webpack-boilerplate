@@ -1,23 +1,4 @@
-import calculateQuality, { getTraitsTable } from "./calculateQuality";
-
-const normalizeAxie = (axie) => {
-  const { id, genes, image, name, breedCount, parts } = axie;
-  const { quality } = calculateQuality(genes, axie.class);
-
-  const traits = getTraitsTable(genes);
-
-  return {
-    id,
-    quality: (quality * 100).toFixed(2),
-    image,
-    parts,
-    genes,
-    traits,
-    name,
-    type: axie.class,
-    breedCount,
-  };
-};
+import normalizeAxie from "./normalizeAxie";
 
 // Normalize the response
 function formatResponse({ data: { matron, sire } }) {

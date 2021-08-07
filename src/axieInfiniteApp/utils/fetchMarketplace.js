@@ -1,6 +1,4 @@
-import calculateQuality, { getTraitsTable } from "./calculateQuality";
-
-export const STAGE_EGG = 1;
+import normalizeAxie from "./normalizeAxie";
 
 function fetchMarketPage({
   parts,
@@ -9,6 +7,7 @@ function fetchMarketPage({
   breed,
   size,
   from,
+  owner,
   ...rest
 }) {
   return fetch("https://axieinfinity.com/graphql-server-v2/graphql", {
@@ -24,8 +23,8 @@ function fetchMarketPage({
         from: from || 0,
         size: size || 100,
         sort: "PriceAsc",
-        auctionType: "Sale",
-        owner: null,
+        auctionType: owner ? "All" : "Sale",
+        owner: owner || null,
         criteria: {
           region: null,
           parts,
@@ -51,44 +50,7 @@ function fetchMarketPage({
 // Normalize the response
 function formatResponse(res) {
   const { results } = res.data.axies;
-  return results.map((axie) => {
-    const {
-      id,
-      genes,
-      auction: { currentPriceUSD, currentPrice },
-      image,
-      stage,
-      breedCount,
-      sireId,
-      sireClass,
-      matronId,
-      matronClass,
-    } = axie;
-
-    const { quality } =
-      stage !== STAGE_EGG ? calculateQuality(genes, axie.class) : NaN;
-
-    const traits = getTraitsTable(genes);
-
-    const ethPrice = Number(currentPrice) / Math.pow(10, 18);
-    const ethRate = currentPriceUSD / ethPrice;
-
-    return {
-      id,
-      ethRate,
-      ethPrice,
-      stage,
-      usdPrice: currentPriceUSD,
-      traits,
-      quality: (quality * 100).toFixed(2),
-      image,
-      breedCount,
-      sireId,
-      sireClass,
-      matronId,
-      matronClass,
-    };
-  });
+  return results.map((axie) => normalizeAxie(axie));
 }
 
 // Exported function

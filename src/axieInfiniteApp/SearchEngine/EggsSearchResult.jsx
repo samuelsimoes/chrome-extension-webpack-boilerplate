@@ -17,7 +17,8 @@ import Button from "@material-ui/core/Button";
 import GenesTable, { CustomPopover } from "./GenesTable";
 import { getSireAndMatron } from "../utils/eggSearchHandler";
 import CopyEthPrice from "./CopyPrice";
-import fetchMarketplace, { STAGE_EGG } from "../utils/fetchMarketplace";
+import fetchMarketplace from "../utils/fetchMarketplace";
+import { EGG_STAGE } from "../utils/normalizeAxie";
 
 const useStyles = makeStyles({
   toolsContainer: {
@@ -138,7 +139,7 @@ const EggSearchResult = ({ isOpen, setIsOpen }) => {
   const classes = useStyles();
 
   const onSearch = async () => {
-    const eggs = await fetchMarketplace({ stages: [STAGE_EGG] });
+    const eggs = await fetchMarketplace({ stages: [EGG_STAGE] });
     setEggsMarket(eggs);
   };
 

@@ -234,10 +234,10 @@ function getPartFromName(traitType, partName) {
 
 const calculate = (genes, classType) => {
   const speGenes = genesToBin(BigInt(genes));
-  let traits = getTraits(speGenes);
-  let qp = getQualityAndPureness(traits, classType.toLowerCase());
+  const traits = getTraits(speGenes);
+  const { quality } = getQualityAndPureness(traits, classType.toLowerCase());
 
-  return qp;
+  return quality;
 };
 
 export const getTraitsTable = (genes) => {
