@@ -13,6 +13,7 @@ import EggsSearchResult from "./SearchEngine/EggsSearchResult";
 import CryptoCalculator from "./CryptoCalculator";
 import Reload from "./Reload";
 import fetchProfile from "./utils/fetchProfile";
+import Valuation from "./Valuation";
 
 const useStyles = makeStyles({
   container: {
@@ -77,21 +78,7 @@ const FloatingPopover = ({ icon, children }) => {
 
 [];
 
-const fetchScholars = async () => {
-  const scholarList = [
-    "ronin:76d640f8e297df54ac89801c713661931c2a0ab4",
-    "ronin:f2a2e4732ce73019ae6814990efcbdeda019aa2a",
-    "ronin:2756b2ce1bac714148a7b66b6eb0a5f7f5ad9313",
-    "ronin:60e64b03ce276cd1e18c1bf8e9bf171620fd27de",
-    "ronin:6c0c98e8aad2693e74d807868823943648b25c81",
-  ];
-
-  const scholarsData = await Promise.all(
-    scholarList.map((roninAddress) => fetchProfile({ roninAddress }))
-  );
-
-  console.log(scholarsData);
-};
+const fetchScholars = async () => {};
 
 export default () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -115,6 +102,9 @@ export default () => {
       >
         <ChildFriendlyIcon />
       </Fab>
+      <FloatingPopover ison={<SearchIcon />}>
+        <Valuation />
+      </FloatingPopover>
       <Fab
         classes={{ root: clasess.fabRoot }}
         color="primary"
