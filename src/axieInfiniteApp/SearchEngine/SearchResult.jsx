@@ -17,6 +17,7 @@ import Button from "@material-ui/core/Button";
 import { GenesPopover } from "./GenesTable";
 import { useSearchContext } from "../context/SearchContext";
 import CopyEthPrice from "./CopyPrice";
+import sendNotification from "../utils/sendNotification";
 
 const useStyles = makeStyles({
   toolsContainer: {
@@ -96,6 +97,63 @@ const AutoRefresh = ({ onRefresh }) => {
   );
 };
 
+const PriceAlert = ({ axieMarket }) => {
+  const [isActive, setIsActive] = useState(false);
+  const [wasNotified, setWasNotified] = useState(false);
+  const [priceLimit, setPriceLimit] = useState(0);
+
+  const handleToggle = (checked) => {
+    setWasNotified(false);
+    setIsActive(checked);
+  };
+
+  useEffect(() => {
+    if (!wasNotified && isActive) {
+      const bargains = axieMarket
+        .filter(({ usdPrice }) => Number(usdPrice) < Number(priceLimit))
+        .map(({ id, usdPrice }) =>
+          sendNotification(
+            encodeURI(
+              `New+axie+listed \n\nLimit price: ${priceLimit} USD \nPrice:+${usdPrice}+USD \n\nhttps://marketplace.axieinfinity.com/axie/${id}`
+            )
+          )
+        );
+
+      if (bargains.length) {
+        setWasNotified(true);
+        setIsActive(false);
+      }
+    }
+  }, [axieMarket, isActive, priceLimit]);
+
+  return (
+    <div>
+      <FormControlLabel
+        control={
+          <Switch
+            checked={isActive}
+            onChange={(e) => handleToggle(e.target.checked)}
+            color="primary"
+          />
+        }
+        label="Price Alert"
+      />
+      <TextField
+        variant="outlined"
+        fullWidth
+        label="Limit price (USD)"
+        autoComplete="off"
+        autoComplete={false}
+        value={priceLimit}
+        onChange={(e) => setPriceLimit(e.target.value)}
+        inputProps={{
+          style: { textAlign: "center", width: "200px" },
+        }}
+      />
+    </div>
+  );
+};
+
 const SearchResult = () => {
   const { axieMarket, isOpenModal, setIsOpenModal, onSearch } =
     useSearchContext();
@@ -115,18 +173,7 @@ const SearchResult = () => {
       <DialogContent classes={{ root: classes.root }}>
         <div className={classes.toolsContainer}>
           <AutoRefresh onRefresh={onSearch} />
-          <TextField
-            variant="outlined"
-            fullWidth
-            label="Axie ID"
-            autoComplete="off"
-            autoComplete={false}
-            value={idAxie}
-            onChange={(e) => setIdAxie(e.target.value)}
-            inputProps={{
-              style: { textAlign: "center" },
-            }}
-          />
+          <PriceAlert axieMarket={axieMarket} />
         </div>
         <TableContainer>
           <Table aria-label="simple table" size="small">

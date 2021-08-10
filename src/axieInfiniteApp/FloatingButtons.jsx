@@ -115,15 +115,17 @@ export default () => {
       >
         <ChildFriendlyIcon />
       </Fab>
-      <Fab
-        classes={{ root: clasess.fabRoot }}
-        color="primary"
-        aria-label="add"
-        onClick={fetchScholars}
-      >
-        <ChildFriendlyIcon />
-      </Fab>
-      {true && <Reload />}
+      {false && (
+        <Fab
+          classes={{ root: clasess.fabRoot }}
+          color="primary"
+          aria-label="add"
+          onClick={fetchScholars}
+        >
+          <ChildFriendlyIcon />
+        </Fab>
+      )}
+      {false && <Reload />}
     </div>
   );
 };
