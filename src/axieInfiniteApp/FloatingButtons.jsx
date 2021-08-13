@@ -105,14 +105,6 @@ export default () => {
       <FloatingPopover ison={<SearchIcon />}>
         <Valuation />
       </FloatingPopover>
-      <Fab
-        classes={{ root: clasess.fabRoot }}
-        color="primary"
-        aria-label="add"
-        onClick={fetchScholars}
-      >
-        <ChildFriendlyIcon />
-      </Fab>
       {true && <Reload />}
     </div>
   );

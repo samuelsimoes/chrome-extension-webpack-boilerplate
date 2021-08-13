@@ -1,0 +1,3376 @@
+[
+  {
+    "profile": {
+      "accountId": "431612",
+      "name": "R1707",
+      "addresses": {
+        "ethereum": "0x085ba2a7b12eaef8180423119fd99d14f5e2bc3c",
+        "tomo": null,
+        "loom": "0x229b2ced689ed15095dc30ca68287c1f5aae3baf",
+        "ronin": "0x76d640f8e297df54ac89801c713661931c2a0ab4",
+        "__typename": "NetAddresses"
+      },
+      "__typename": "PublicProfile"
+    },
+    "property": [
+      {
+        "id": "3854735",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3364491,
+        "sireClass": "Plant",
+        "matronId": 3311624,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3854778",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3364491,
+        "sireClass": "Plant",
+        "matronId": 3311624,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3854757",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3364491,
+        "sireClass": "Plant",
+        "matronId": 3311624,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3795614",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2799016,
+        "sireClass": "Plant",
+        "matronId": 3276477,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3795633",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2799016,
+        "sireClass": "Plant",
+        "matronId": 3276477,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3875787",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3394427,
+        "sireClass": "Plant",
+        "matronId": 2883888,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3875832",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2883888,
+        "sireClass": "Plant",
+        "matronId": 3394427,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3875919",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3394427,
+        "sireClass": "Plant",
+        "matronId": 2883888,
+        "matronClass": "Plant"
+      }
+    ],
+    "wallet": {
+      "eth": 0,
+      "axs": 0.000090631241979948,
+      "slp": 0
+    },
+    "gameProgress": {
+      "claimableSlp": 0,
+      "totalSlp": 0
+    }
+  },
+  {
+    "profile": {
+      "accountId": "1528941",
+      "name": "Crypto Gamer 1",
+      "addresses": {
+        "ethereum": null,
+        "tomo": null,
+        "loom": "0xb739cf1790af08ad4951383c26736da31946a452",
+        "ronin": "0xf2a2e4732ce73019ae6814990efcbdeda019aa2a",
+        "__typename": "NetAddresses"
+      },
+      "__typename": "PublicProfile"
+    },
+    "property": [
+      {
+        "id": "2609890",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-clear",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Clear"
+            },
+            "r1": {
+              "partId": "eyes-telescope",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Telescope"
+            },
+            "r2": {
+              "partId": "eyes-clear",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Clear"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-lam",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Lam"
+            },
+            "r1": {
+              "partId": "mouth-cute-bunny",
+              "class": "bug",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Cute Bunny"
+            },
+            "r2": {
+              "partId": "mouth-confident",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Confident"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-inkling",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Inkling"
+            },
+            "r1": {
+              "partId": "ears-gill",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Gill"
+            },
+            "r2": {
+              "partId": "ears-small-frill",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Small Frill"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-shoal-star",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Shoal Star"
+            },
+            "r1": {
+              "partId": "horn-merry",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Merry"
+            },
+            "r2": {
+              "partId": "horn-shoal-star",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Shoal Star"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-goldfish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Goldfish"
+            },
+            "r1": {
+              "partId": "back-goldfish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Goldfish"
+            },
+            "r2": {
+              "partId": "back-timber",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Timber"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-nimo",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nimo"
+            },
+            "r1": {
+              "partId": "tail-nimo",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nimo"
+            },
+            "r2": {
+              "partId": "tail-ranchu",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Ranchu"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "90.63",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/2609890/axie/axie-full-transparent.png",
+        "breedCount": 3,
+        "sireId": 2310482,
+        "sireClass": "Aquatic",
+        "matronId": 2340883,
+        "matronClass": "Aquatic"
+      },
+      {
+        "id": "2475505",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-papi",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Papi"
+            },
+            "r1": {
+              "partId": "eyes-confused",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Confused"
+            },
+            "r2": {
+              "partId": "eyes-confused",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Confused"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-serious",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Serious"
+            },
+            "r1": {
+              "partId": "mouth-razor-bite",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Razor Bite"
+            },
+            "r2": {
+              "partId": "mouth-serious",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Serious"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-hollow",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Hollow"
+            },
+            "r1": {
+              "partId": "ears-leafy",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Leafy"
+            },
+            "r2": {
+              "partId": "ears-nyan",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Nyan"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-cactus",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Cactus"
+            },
+            "r1": {
+              "partId": "horn-cactus",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Cactus"
+            },
+            "r2": {
+              "partId": "horn-cactus",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Cactus"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "r1": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "r2": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "r1": {
+              "partId": "tail-hatsune",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Hatsune"
+            },
+            "r2": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "95.83",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/2475505/axie/axie-full-transparent.png",
+        "breedCount": 4,
+        "sireId": 2126310,
+        "sireClass": "Plant",
+        "matronId": 2153832,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "2354900",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-puppy",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Puppy"
+            },
+            "r1": {
+              "partId": "eyes-chubby",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Chubby"
+            },
+            "r2": {
+              "partId": "eyes-scar",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Scar"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Nut Cracker"
+            },
+            "r1": {
+              "partId": "mouth-little-owl",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Little Owl"
+            },
+            "r2": {
+              "partId": "mouth-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Nut Cracker"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-curly",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Curly"
+            },
+            "r1": {
+              "partId": "ears-owl",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Owl"
+            },
+            "r2": {
+              "partId": "ears-curly",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Curly"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-dual-blade",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Dual Blade"
+            },
+            "r1": {
+              "partId": "horn-dual-blade",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Dual Blade"
+            },
+            "r2": {
+              "partId": "horn-merry",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Merry"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-risky-beast",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Risky Beast"
+            },
+            "r1": {
+              "partId": "back-perch",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Perch"
+            },
+            "r2": {
+              "partId": "back-watering-can",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Watering Can"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nut Cracker"
+            },
+            "r1": {
+              "partId": "tail-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nut Cracker"
+            },
+            "r2": {
+              "partId": "tail-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nut Cracker"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "75.00",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/2354900/axie/axie-full-transparent.png",
+        "breedCount": 3,
+        "sireId": 1998129,
+        "sireClass": "Beast",
+        "matronId": 1998410,
+        "matronClass": "Beast"
+      }
+    ],
+    "wallet": {
+      "eth": 0,
+      "axs": 0,
+      "slp": 0
+    },
+    "gameProgress": {
+      "claimableSlp": 0,
+      "totalSlp": 2284
+    }
+  },
+  {
+    "profile": {
+      "accountId": "1531120",
+      "name": "Crypto gamer 2",
+      "addresses": {
+        "ethereum": null,
+        "tomo": null,
+        "loom": "0x41e54851143a02ce0125720cd15e641ebb5b06d1",
+        "ronin": "0x2756b2ce1bac714148a7b66b6eb0a5f7f5ad9313",
+        "__typename": "NetAddresses"
+      },
+      "__typename": "PublicProfile"
+    },
+    "property": [
+      {
+        "id": "2475395",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-papi",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Papi"
+            },
+            "r1": {
+              "partId": "eyes-confused",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Confused"
+            },
+            "r2": {
+              "partId": "eyes-sleepless",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Sleepless"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-serious",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Serious"
+            },
+            "r1": {
+              "partId": "mouth-razor-bite",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Razor Bite"
+            },
+            "r2": {
+              "partId": "mouth-little-owl",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Little Owl"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-hollow",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Hollow"
+            },
+            "r1": {
+              "partId": "ears-rosa",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Rosa"
+            },
+            "r2": {
+              "partId": "ears-clover",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Clover"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-cactus",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Cactus"
+            },
+            "r1": {
+              "partId": "horn-rose-bud",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Rose Bud"
+            },
+            "r2": {
+              "partId": "horn-scaly-spear",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Scaly Spear"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "r1": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "r2": {
+              "partId": "back-garish-worm",
+              "class": "bug",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Garish Worm"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "r1": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "r2": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "92.71",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/2475395/axie/axie-full-transparent.png",
+        "breedCount": 3,
+        "sireId": 2126310,
+        "sireClass": "Plant",
+        "matronId": 2153832,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "2536144",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-clear",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Clear"
+            },
+            "r1": {
+              "partId": "eyes-clear",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Clear"
+            },
+            "r2": {
+              "partId": "eyes-clear",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Clear"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-lam",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Lam"
+            },
+            "r1": {
+              "partId": "mouth-risky-fish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Risky Fish"
+            },
+            "r2": {
+              "partId": "mouth-catfish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Catfish"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-inkling",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Inkling"
+            },
+            "r1": {
+              "partId": "ears-nyan",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Nyan"
+            },
+            "r2": {
+              "partId": "ears-inkling",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Inkling"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-shoal-star",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Shoal Star"
+            },
+            "r1": {
+              "partId": "horn-shoal-star",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Shoal Star"
+            },
+            "r2": {
+              "partId": "horn-scaly-spear",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Scaly Spear"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-goldfish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Goldfish"
+            },
+            "r1": {
+              "partId": "back-goldfish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Goldfish"
+            },
+            "r2": {
+              "partId": "back-hermit",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Hermit"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-nimo",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nimo"
+            },
+            "r1": {
+              "partId": "tail-potato-leaf",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Potato Leaf"
+            },
+            "r2": {
+              "partId": "tail-koi",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Koi"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "92.71",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/2536144/axie/axie-full-transparent.png",
+        "breedCount": 3,
+        "sireId": 1920539,
+        "sireClass": "Aquatic",
+        "matronId": 1852063,
+        "matronClass": "Aquatic"
+      },
+      {
+        "id": "2662819",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-chubby",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Chubby"
+            },
+            "r1": {
+              "partId": "eyes-robin",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Robin"
+            },
+            "r2": {
+              "partId": "eyes-telescope",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Telescope"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Nut Cracker"
+            },
+            "r1": {
+              "partId": "mouth-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Nut Cracker"
+            },
+            "r2": {
+              "partId": "mouth-piranha",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Piranha"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-risky-bird",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Risky Bird"
+            },
+            "r1": {
+              "partId": "ears-nyan",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Nyan"
+            },
+            "r2": {
+              "partId": "ears-nyan",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Nyan"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-dual-blade",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Dual Blade"
+            },
+            "r1": {
+              "partId": "horn-dual-blade",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Dual Blade"
+            },
+            "r2": {
+              "partId": "horn-dual-blade",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Dual Blade"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-risky-beast",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Risky Beast"
+            },
+            "r1": {
+              "partId": "back-scarab",
+              "class": "bug",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Scarab"
+            },
+            "r2": {
+              "partId": "back-cupid",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Cupid"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nut Cracker"
+            },
+            "r1": {
+              "partId": "tail-ranchu",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Ranchu"
+            },
+            "r2": {
+              "partId": "tail-hot-butt",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Hot Butt"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "73.96",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/2662819/axie/axie-full-transparent.png",
+        "breedCount": 3,
+        "sireId": 2222537,
+        "sireClass": "Beast",
+        "matronId": 1911972,
+        "matronClass": "Beast"
+      }
+    ],
+    "wallet": {
+      "eth": 0,
+      "axs": 0,
+      "slp": 0
+    },
+    "gameProgress": {
+      "claimableSlp": 0,
+      "totalSlp": 1950
+    }
+  },
+  {
+    "profile": {
+      "accountId": "1738139",
+      "name": "jugador crypto 3",
+      "addresses": {
+        "ethereum": null,
+        "tomo": null,
+        "loom": "0x2fe356d2b5f0ee3407b0131ee947f8c02ff09cbf",
+        "ronin": "0x60e64b03ce276cd1e18c1bf8e9bf171620fd27de",
+        "__typename": "NetAddresses"
+      },
+      "__typename": "PublicProfile"
+    },
+    "property": [
+      {
+        "id": "2989029",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-chubby",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Chubby"
+            },
+            "r1": {
+              "partId": "eyes-nerdy",
+              "class": "bug",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Nerdy"
+            },
+            "r2": {
+              "partId": "eyes-scar",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Scar"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Nut Cracker"
+            },
+            "r1": {
+              "partId": "mouth-little-owl",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Little Owl"
+            },
+            "r2": {
+              "partId": "mouth-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Nut Cracker"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-curly",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Curly"
+            },
+            "r1": {
+              "partId": "ears-nyan",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Nyan"
+            },
+            "r2": {
+              "partId": "ears-nyan",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Nyan"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-dual-blade",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Dual Blade"
+            },
+            "r1": {
+              "partId": "horn-dual-blade",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Dual Blade"
+            },
+            "r2": {
+              "partId": "horn-dual-blade",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Dual Blade"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-risky-beast",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Risky Beast"
+            },
+            "r1": {
+              "partId": "back-cupid",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Cupid"
+            },
+            "r2": {
+              "partId": "back-perch",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Perch"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nut Cracker"
+            },
+            "r1": {
+              "partId": "tail-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nut Cracker"
+            },
+            "r2": {
+              "partId": "tail-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nut Cracker"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "76.04",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/2989029/axie/axie-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2662819,
+        "sireClass": "Beast",
+        "matronId": 2354900,
+        "matronClass": "Beast"
+      },
+      {
+        "id": "2920249",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-papi",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Papi"
+            },
+            "r1": {
+              "partId": "eyes-gero",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Gero"
+            },
+            "r2": {
+              "partId": "eyes-kotaro",
+              "class": "bug",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Kotaro?"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-serious",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Serious"
+            },
+            "r1": {
+              "partId": "mouth-kotaro",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Kotaro"
+            },
+            "r2": {
+              "partId": "mouth-serious",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Serious"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-hollow",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Hollow"
+            },
+            "r1": {
+              "partId": "ears-nimo",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Nimo"
+            },
+            "r2": {
+              "partId": "ears-leafy",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Leafy"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-pocky",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Pocky"
+            },
+            "r1": {
+              "partId": "horn-rose-bud",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Rose Bud"
+            },
+            "r2": {
+              "partId": "horn-oranda",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Oranda"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "r1": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "r2": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "r1": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "r2": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "76.04",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/2920249/axie/axie-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2501371,
+        "sireClass": "Plant",
+        "matronId": 2475642,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "2916457",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-telescope",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Telescope"
+            },
+            "r1": {
+              "partId": "eyes-clear",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Clear"
+            },
+            "r2": {
+              "partId": "eyes-clear",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Clear"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-lam",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Lam"
+            },
+            "r1": {
+              "partId": "mouth-risky-fish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Risky Fish"
+            },
+            "r2": {
+              "partId": "mouth-risky-fish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Risky Fish"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-bubblemaker",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Bubblemaker"
+            },
+            "r1": {
+              "partId": "ears-tiny-fan",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Tiny Fan"
+            },
+            "r2": {
+              "partId": "ears-inkling",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Inkling"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-shoal-star",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Shoal Star"
+            },
+            "r1": {
+              "partId": "horn-clamshell",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Clamshell"
+            },
+            "r2": {
+              "partId": "horn-shoal-star",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Shoal Star"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-goldfish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Goldfish"
+            },
+            "r1": {
+              "partId": "back-shiitake",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Shiitake"
+            },
+            "r2": {
+              "partId": "back-goldfish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Goldfish"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-nimo",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nimo"
+            },
+            "r1": {
+              "partId": "tail-gila",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Gila"
+            },
+            "r2": {
+              "partId": "tail-nimo",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nimo"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "93.75",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/2916457/axie/axie-full-transparent.png",
+        "breedCount": 3,
+        "sireId": 1966653,
+        "sireClass": "Aquatic",
+        "matronId": 2622704,
+        "matronClass": "Aquatic"
+      }
+    ],
+    "wallet": {
+      "eth": 0,
+      "axs": 0,
+      "slp": 0
+    },
+    "gameProgress": {
+      "claimableSlp": 0,
+      "totalSlp": 1234
+    }
+  },
+  {
+    "profile": {
+      "accountId": "1739168",
+      "name": "JuanPS",
+      "addresses": {
+        "ethereum": null,
+        "tomo": null,
+        "loom": "0x155eb330f4fd717d23d83cdcca1599513e710284",
+        "ronin": "0x6c0c98e8aad2693e74d807868823943648b25c81",
+        "__typename": "NetAddresses"
+      },
+      "__typename": "PublicProfile"
+    },
+    "property": [
+      {
+        "id": "2947660",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-telescope",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Telescope"
+            },
+            "r1": {
+              "partId": "eyes-clear",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Clear"
+            },
+            "r2": {
+              "partId": "eyes-clear",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Clear"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-lam",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Lam"
+            },
+            "r1": {
+              "partId": "mouth-catfish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Catfish"
+            },
+            "r2": {
+              "partId": "mouth-risky-fish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Risky Fish"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-inkling",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Inkling"
+            },
+            "r1": {
+              "partId": "ears-nyan",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Nyan"
+            },
+            "r2": {
+              "partId": "ears-gill",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Gill"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-shoal-star",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Shoal Star"
+            },
+            "r1": {
+              "partId": "horn-shoal-star",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Shoal Star"
+            },
+            "r2": {
+              "partId": "horn-scaly-spear",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Scaly Spear"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-goldfish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Goldfish"
+            },
+            "r1": {
+              "partId": "back-goldfish",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Goldfish"
+            },
+            "r2": {
+              "partId": "back-hermit",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Hermit"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-nimo",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nimo"
+            },
+            "r1": {
+              "partId": "tail-potato-leaf",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Potato Leaf"
+            },
+            "r2": {
+              "partId": "tail-nimo",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nimo"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "92.71",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/2947660/axie/axie-full-transparent.png",
+        "breedCount": 3,
+        "sireId": 2609890,
+        "sireClass": "Aquatic",
+        "matronId": 2536144,
+        "matronClass": "Aquatic"
+      },
+      {
+        "id": "2989054",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-chubby",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Chubby"
+            },
+            "r1": {
+              "partId": "eyes-chubby",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Chubby"
+            },
+            "r2": {
+              "partId": "eyes-scar",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Scar"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Nut Cracker"
+            },
+            "r1": {
+              "partId": "mouth-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Nut Cracker"
+            },
+            "r2": {
+              "partId": "mouth-piranha",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Piranha"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-owl",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Owl"
+            },
+            "r1": {
+              "partId": "ears-curly",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Curly"
+            },
+            "r2": {
+              "partId": "ears-curly",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Curly"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-dual-blade",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Dual Blade"
+            },
+            "r1": {
+              "partId": "horn-merry",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Merry"
+            },
+            "r2": {
+              "partId": "horn-shoal-star",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Shoal Star"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-risky-beast",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Risky Beast"
+            },
+            "r1": {
+              "partId": "back-cupid",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Cupid"
+            },
+            "r2": {
+              "partId": "back-watering-can",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Watering Can"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-ranchu",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Ranchu"
+            },
+            "r1": {
+              "partId": "tail-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nut Cracker"
+            },
+            "r2": {
+              "partId": "tail-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Nut Cracker"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "63.54",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/2989054/axie/axie-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2662819,
+        "sireClass": "Beast",
+        "matronId": 2354900,
+        "matronClass": "Beast"
+      },
+      {
+        "id": "2920275",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-papi",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Papi"
+            },
+            "r1": {
+              "partId": "eyes-gero",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Gero"
+            },
+            "r2": {
+              "partId": "eyes-kotaro",
+              "class": "bug",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Kotaro?"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-serious",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Serious"
+            },
+            "r1": {
+              "partId": "mouth-serious",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Serious"
+            },
+            "r2": {
+              "partId": "mouth-little-owl",
+              "class": "bird",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Little Owl"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-hollow",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Hollow"
+            },
+            "r1": {
+              "partId": "ears-clover",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Clover"
+            },
+            "r2": {
+              "partId": "ears-rosa",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Rosa"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-cactus",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Cactus"
+            },
+            "r1": {
+              "partId": "horn-pocky",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Pocky"
+            },
+            "r2": {
+              "partId": "horn-rose-bud",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Rose Bud"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "r1": {
+              "partId": "back-hero",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Hero"
+            },
+            "r2": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "r1": {
+              "partId": "tail-yam",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Yam"
+            },
+            "r2": {
+              "partId": "tail-wall-gecko",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Wall Gecko"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "87.50",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/2920275/axie/axie-full-transparent.png",
+        "breedCount": 3,
+        "sireId": 2501371,
+        "sireClass": "Plant",
+        "matronId": 2475642,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3644662",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-papi",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Papi"
+            },
+            "r1": {
+              "partId": "eyes-sleepless",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Sleepless"
+            },
+            "r2": {
+              "partId": "eyes-confused",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Confused"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-serious",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Serious"
+            },
+            "r1": {
+              "partId": "mouth-serious",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Serious"
+            },
+            "r2": {
+              "partId": "mouth-razor-bite",
+              "class": "reptile",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Razor Bite"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-hollow",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Hollow"
+            },
+            "r1": {
+              "partId": "ears-hollow",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Hollow"
+            },
+            "r2": {
+              "partId": "ears-hollow",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Hollow"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-cactus",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Cactus"
+            },
+            "r1": {
+              "partId": "horn-cactus",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Cactus"
+            },
+            "r2": {
+              "partId": "horn-cactus",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Cactus"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "r1": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "r2": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "r1": {
+              "partId": "tail-shrimp",
+              "class": "aquatic",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Shrimp"
+            },
+            "r2": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "92.71",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/3644662/axie/axie-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3177300,
+        "sireClass": "Plant",
+        "matronId": 3168751,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3995457",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3494201,
+        "sireClass": "Plant",
+        "matronId": 3388541,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3995468",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3494201,
+        "sireClass": "Plant",
+        "matronId": 3388541,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3995498",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3494201,
+        "sireClass": "Plant",
+        "matronId": 3388541,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3999552",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3438673,
+        "sireClass": "Plant",
+        "matronId": 3289211,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3999571",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3438673,
+        "sireClass": "Plant",
+        "matronId": 3289211,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "4019261",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/aquatic-aquatic-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2947660,
+        "sireClass": "Aquatic",
+        "matronId": 2916457,
+        "matronClass": "Aquatic"
+      },
+      {
+        "id": "4019209",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/aquatic-aquatic-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2947660,
+        "sireClass": "Aquatic",
+        "matronId": 2916457,
+        "matronClass": "Aquatic"
+      },
+      {
+        "id": "4019313",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/aquatic-aquatic-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2947660,
+        "sireClass": "Aquatic",
+        "matronId": 2916457,
+        "matronClass": "Aquatic"
+      },
+      {
+        "id": "4000336",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3438673,
+        "sireClass": "Plant",
+        "matronId": 3289211,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3795550",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2799016,
+        "sireClass": "Plant",
+        "matronId": 3276477,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3795581",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2799016,
+        "sireClass": "Plant",
+        "matronId": 3276477,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3912219",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2215376,
+        "sireClass": "Plant",
+        "matronId": 2989386,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3912240",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2989386,
+        "sireClass": "Plant",
+        "matronId": 2215376,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3912196",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2215376,
+        "sireClass": "Plant",
+        "matronId": 2989386,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3912207",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2215376,
+        "sireClass": "Plant",
+        "matronId": 2989386,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "4068523",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3644529,
+        "sireClass": "Plant",
+        "matronId": 3644840,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "4068732",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3644529,
+        "sireClass": "Plant",
+        "matronId": 3644840,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "4070064",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3644733,
+        "sireClass": "Plant",
+        "matronId": 3644622,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "4070144",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3644733,
+        "sireClass": "Plant",
+        "matronId": 3644622,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "4070238",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3644733,
+        "sireClass": "Plant",
+        "matronId": 3644622,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "4070365",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3644733,
+        "sireClass": "Plant",
+        "matronId": 3644622,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "4068964",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3644529,
+        "sireClass": "Plant",
+        "matronId": 3644840,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "4068864",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 1,
+        "traits": {
+          "eyes": {
+            "mystic": false
+          },
+          "mouth": {
+            "mystic": false
+          },
+          "ears": {
+            "mystic": false
+          },
+          "horn": {
+            "mystic": false
+          },
+          "back": {
+            "mystic": false
+          },
+          "tail": {
+            "mystic": false
+          }
+        },
+        "quality": "NaN",
+        "image": "https://storage.googleapis.com/axie-cdn/avatars/egg/plant-plant-egg-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 3644840,
+        "sireClass": "Plant",
+        "matronId": 3644529,
+        "matronClass": "Plant"
+      },
+      {
+        "id": "3088135",
+        "ethRate": null,
+        "ethPrice": null,
+        "stage": 4,
+        "traits": {
+          "eyes": {
+            "d": {
+              "partId": "eyes-papi",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Papi"
+            },
+            "r1": {
+              "partId": "eyes-papi",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Papi"
+            },
+            "r2": {
+              "partId": "eyes-cucumber-slice",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "eyes",
+              "name": "Cucumber Slice"
+            },
+            "mystic": false
+          },
+          "mouth": {
+            "d": {
+              "partId": "mouth-serious",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Serious"
+            },
+            "r1": {
+              "partId": "mouth-serious",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Serious"
+            },
+            "r2": {
+              "partId": "mouth-serious",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "mouth",
+              "name": "Serious"
+            },
+            "mystic": false
+          },
+          "ears": {
+            "d": {
+              "partId": "ears-nut-cracker",
+              "class": "beast",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Nut Cracker"
+            },
+            "r1": {
+              "partId": "ears-clover",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Clover"
+            },
+            "r2": {
+              "partId": "ears-lotus",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "ears",
+              "name": "Lotus"
+            },
+            "mystic": false
+          },
+          "horn": {
+            "d": {
+              "partId": "horn-cactus",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Cactus"
+            },
+            "r1": {
+              "partId": "horn-cactus",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Cactus"
+            },
+            "r2": {
+              "partId": "horn-rose-bud",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "horn",
+              "name": "Rose Bud"
+            },
+            "mystic": false
+          },
+          "back": {
+            "d": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "r1": {
+              "partId": "back-pumpkin",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Pumpkin"
+            },
+            "r2": {
+              "partId": "back-turnip",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "back",
+              "name": "Turnip"
+            },
+            "mystic": false
+          },
+          "tail": {
+            "d": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "r1": {
+              "partId": "tail-carrot",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Carrot"
+            },
+            "r2": {
+              "partId": "tail-hot-butt",
+              "class": "plant",
+              "specialGenes": null,
+              "type": "tail",
+              "name": "Hot Butt"
+            },
+            "mystic": false
+          }
+        },
+        "quality": "87.50",
+        "image": "https://storage.googleapis.com/assets.axieinfinity.com/axies/3088135/axie/axie-full-transparent.png",
+        "breedCount": 0,
+        "sireId": 2755047,
+        "sireClass": "Plant",
+        "matronId": 2654273,
+        "matronClass": "Plant"
+      }
+    ],
+    "wallet": {
+      "eth": 0.3299960210833333,
+      "axs": 8.0235,
+      "slp": 2.678e-15
+    },
+    "gameProgress": {
+      "claimableSlp": 2678,
+      "totalSlp": 4173
+    }
+  }
+]
