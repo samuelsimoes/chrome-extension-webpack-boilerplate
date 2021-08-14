@@ -1,9 +1,10 @@
 function formatGameProgress(response) {
-  const { claimable_total, total } = response;
+  const { claimable_total, total, last_claimed_item_at } = response;
 
   return {
     claimableSlp: claimable_total,
     totalSlp: total,
+    last_claimed_item_at,
   };
 }
 

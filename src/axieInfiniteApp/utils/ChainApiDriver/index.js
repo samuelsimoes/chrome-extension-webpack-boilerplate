@@ -48,6 +48,6 @@ export const getSlpBalance = async (address = "") => {
   if (!address) return NaN;
 
   const balance = await slpContract.balanceOf(address);
-  const formatedBalance = Number(ethers.utils.formatEther(balance, 0));
+  const formatedBalance = Number(ethers.utils.formatEther(balance));
   return formatedBalance;
 };

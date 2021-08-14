@@ -4,15 +4,14 @@ import Popover from "@material-ui/core/Popover";
 import Fab from "@material-ui/core/Fab";
 import SearchIcon from "@material-ui/icons/Search";
 import FunctionsIcon from "@material-ui/icons/Functions";
-import Button from "@material-ui/core/Button";
 import ChildFriendlyIcon from "@material-ui/icons/ChildFriendly";
+import SchoolIcon from "@material-ui/icons/School";
 
 import SearchEngine from "./SearchEngine";
 import SearchResult from "./SearchEngine/SearchResult";
 import EggsSearchResult from "./SearchEngine/EggsSearchResult";
 import CryptoCalculator from "./CryptoCalculator";
 import Reload from "./Reload";
-import fetchProfile from "./utils/fetchProfile";
 import Valuation from "./Valuation";
 
 const useStyles = makeStyles({
@@ -76,10 +75,6 @@ const FloatingPopover = ({ icon, children }) => {
   );
 };
 
-[];
-
-const fetchScholars = async () => {};
-
 export default () => {
   const [isOpen, setIsOpen] = useState(false);
   const clasess = useStyles();
@@ -102,10 +97,10 @@ export default () => {
       >
         <ChildFriendlyIcon />
       </Fab>
-      <FloatingPopover ison={<SearchIcon />}>
+      <FloatingPopover icon={<SchoolIcon />}>
         <Valuation />
       </FloatingPopover>
-      {true && <Reload />}
+      {false && <Reload />}
     </div>
   );
 };

@@ -6,17 +6,17 @@ import Tooltip from "@material-ui/core/Tooltip";
 import { green } from "@material-ui/core/colors";
 
 const useStylesTooltip = makeStyles((theme) => ({
-  arrow: {
-    color: theme.palette.common.black,
-  },
   tooltip: {
     backgroundColor: theme.palette.common.black,
     fontSize: "1rem",
     padding: "6px",
   },
+  iconRoot: {
+    fontSize: (props) => props.fontSize || "inherit",
+  },
 }));
 
-const CopyButton = ({ valueToCopy, tooltipContent, fontSize = "1rem" }) => {
+const CopyButton = ({ valueToCopy, tooltipContent, fontSize = "14px" }) => {
   const [isCoping, setIsCoping] = useState(false);
 
   const handleCopy = () => {
@@ -28,7 +28,7 @@ const CopyButton = ({ valueToCopy, tooltipContent, fontSize = "1rem" }) => {
     setTimeout(() => setIsCoping(false), 2 * 1000);
   };
 
-  const classes = useStylesTooltip();
+  const classes = useStylesTooltip({ fontSize });
 
   return (
     <Tooltip
@@ -45,9 +45,12 @@ const CopyButton = ({ valueToCopy, tooltipContent, fontSize = "1rem" }) => {
     >
       <IconButton size="small" onClick={handleCopy} disableFocusRipple>
         <FileCopyIcon
+          size="small"
+          classes={{
+            root: classes.iconRoot,
+          }}
           style={{
             color: isCoping ? green[500] : "grey",
-            fontSize: `${fontSize} !important` || "inherit",
           }}
         />
       </IconButton>

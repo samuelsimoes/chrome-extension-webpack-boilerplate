@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import GridOnIcon from "@material-ui/icons/GridOn";
 import Popover from "@material-ui/core/Popover";
 import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
 import Tooltip from "@material-ui/core/Tooltip";
+import { v4 as uuid } from "uuid";
 
 import { useInyectionContext } from "./context/InyectionContext";
 import wrapIntoPortal from "./utils/wrapIntoPortal";
@@ -55,13 +56,13 @@ const ButtonPopover = ({ tooltipTitle, children }) => {
 
 var globalUrlVariable = "";
 const MarketplaceInyection = () => {
-  const { inyect, setInyect } = useInyectionContext();
+  const [inyect, setInyect] = useState("");
 
   useEffect(() => {
     const debouncedInyection = debounce(() => {
       if (globalUrlVariable !== window.location.href) {
         globalUrlVariable = window.location.href;
-        setInyect();
+        setInyect(uuid());
         makeGridSortable();
       }
     }, 1.5 * 1000);
