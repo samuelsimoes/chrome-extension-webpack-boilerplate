@@ -125,7 +125,7 @@ function calculateBreedState(lastState, currentStep) {
     const slpForA = calculateBreedCost(axieA, breedTimes);
     const slpForB = calculateBreedCost(axieB, breedTimes);
 
-    const axsCost = 4 * breedTimes;
+    const axsCost = 2 * breedTimes;
 
     stateManager.spend({ slp: slpForA + slpForB, axs: axsCost });
     stateManager.breed(axieAId, breedTimes);

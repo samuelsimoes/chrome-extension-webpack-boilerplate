@@ -55,14 +55,16 @@ function formatResponse(res) {
 
 // Exported function
 export default async (props) => {
-  let firstResponse = await fetchMarketPage({ ...props, from: 0 * 100 });
+  try {
+    let firstResponse = await fetchMarketPage({
+      ...props,
+      from: 0 * 100,
+    });
 
-  const { total } = firstResponse.data.axies;
-  const amountOfPages = Math.trunc(Number(total) / 100);
+    const { total } = firstResponse.data.axies;
+    const amountOfPages = Math.trunc(Number(total) / 100) || 1;
 
-  let restOfPages = [];
-  if (amountOfPages > 1) {
-    const amountOfRequest = amountOfPages > 9 ? 9 : amountOfPages;
+    const amountOfRequest = amountOfPages > 12 ? 12 : amountOfPages;
 
     const responses = await Promise.all(
       new Array(amountOfRequest)
@@ -74,9 +76,10 @@ export default async (props) => {
         )
     );
 
-    restOfPages = responses.flat();
-  }
+    const restOfPages = responses.flat();
 
-  const formatedFirstPage = formatResponse(firstResponse);
-  return [...formatedFirstPage, ...restOfPages];
+    return [...restOfPages];
+  } catch (e) {
+    return [];
+  }
 };
