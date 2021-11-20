@@ -103,7 +103,7 @@ const getStateManager = (state) => {
 // --------------------------
 // --------------------------
 const calculateBreedCost = (axie, times) => {
-  const BREED_COST = [150, 300, 450, 750, 1200, 1950, 3150];
+  const BREED_COST = [300, 450, 750, 1200, 1950, 3150, 5100];
   const { breedCount } = axie;
 
   return BREED_COST.slice(breedCount, breedCount + times).reduce(

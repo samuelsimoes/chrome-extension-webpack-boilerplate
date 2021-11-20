@@ -1,15 +1,15 @@
 const slpCost = {
-  0: 150,
-  1: 300,
-  2: 450,
-  3: 750,
-  4: 1200,
-  5: 1950,
-  6: 3150,
+  0: 300,
+  1: 450,
+  2: 750,
+  3: 1200,
+  4: 1950,
+  5: 3150,
+  6: 5100,
 };
 
 export default (breedA, breedB) => {
   const slp = slpCost[breedA] + slpCost[breedB];
 
-  return { axs: 2, slp };
+  return { axs: 1, slp };
 };

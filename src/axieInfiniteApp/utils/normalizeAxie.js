@@ -31,6 +31,7 @@ export default function normalizeAxie(axie) {
     ethRate,
     ethPrice,
     stage,
+    classType: axie.class,
     usdPrice: currentPriceUSD,
     traits,
     quality: (quality * 100).toFixed(2),

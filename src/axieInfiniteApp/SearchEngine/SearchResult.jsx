@@ -16,6 +16,15 @@ import Button from "@material-ui/core/Button";
 
 import { GenesPopover } from "./GenesTable";
 import { useSearchContext } from "../context/SearchContext";
+import Aquatic from "../assets/Aquatic";
+import Beast from "../assets/Beast";
+import Bird from "../assets/Bird";
+import Bug from "../assets/Bug";
+import Dawn from "../assets/Dawn";
+import Dusk from "../assets/Dusk";
+import Mech from "../assets/Mech";
+import Plant from "../assets/Plant";
+import Reptile from "../assets/Reptile";
 import CopyEthPrice from "./CopyPrice";
 import sendNotification from "../utils/sendNotification";
 
@@ -50,6 +59,40 @@ const useStyles = makeStyles({
     margin: "15px auto",
   },
 });
+
+const ClassIcon = ({ classType }) => {
+  switch (classType) {
+    case "Aquatic":
+      return <Aquatic />;
+
+    case "Beast":
+      return <Beast />;
+
+    case "Bird":
+      return <Bird />;
+
+    case "Bug":
+      return <Bug />;
+
+    case "Dawn":
+      return <Dawn />;
+
+    case "Dusk":
+      return <Dusk />;
+
+    case "Mech":
+      return <Mech />;
+
+    case "Plant":
+      return <Plant />;
+
+    case "Reptile":
+      return <Reptile />;
+
+    default:
+      return null;
+  }
+};
 
 const AutoRefresh = ({ onRefresh }) => {
   const [isAutoRefresh, setIsAutoRefresh] = useState(true);
@@ -203,6 +246,7 @@ const SearchResult = () => {
                     ethPrice,
                     ethRate,
                     quality,
+                    classType,
                     traits,
                     breedCount,
                   }) => (
@@ -242,6 +286,7 @@ const SearchResult = () => {
                       >
                         <GenesPopover traits={traits} />
                         <span>{quality}%</span>
+                        <ClassIcon classType={classType} />
                       </TableCell>
                     </TableRow>
                   )

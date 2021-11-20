@@ -60,10 +60,12 @@ const MarketplaceInyection = () => {
 
   useEffect(() => {
     const debouncedInyection = debounce(() => {
-      if (globalUrlVariable !== window.location.href) {
-        globalUrlVariable = window.location.href;
-        setInyect(uuid());
-        makeGridSortable();
+      if (document.querySelector(".AxieCard_AxieCard__1vv4n")) {
+        if (globalUrlVariable !== window.location.href) {
+          globalUrlVariable = window.location.href;
+          setInyect(uuid());
+          makeGridSortable();
+        }
       }
     }, 1.5 * 1000);
 
@@ -76,34 +78,37 @@ const MarketplaceInyection = () => {
 
   return inyect ? (
     <>
-      {Array.from(document.querySelectorAll(".axie-card")).map((elem) => {
-        const target =
-          elem.querySelector("span").parentElement.parentElement.parentElement;
+      {Array.from(document.querySelectorAll(".AxieCard_AxieCard__1vv4n")).map(
+        (elem) => {
+          const target =
+            elem.querySelector("span").parentElement.parentElement
+              .parentElement;
 
-        target.addEventListener("click", (e) => e.preventDefault());
+          target.addEventListener("click", (e) => e.preventDefault());
 
-        const axieId = target.innerText.replace("#", "");
+          const axieId = target.innerText.replace("#", "");
 
-        const PortalElem = wrapIntoPortal(
-          <>
-            <Tooltip title="Show genes">
-              <IconButton
-                aria-label="delete"
-                onClick={() => freakTableManipulataion(elem)}
-                size="small"
-              >
-                <GridOnIcon fontSize="small" style={{ color: "white" }} />
-              </IconButton>
-            </Tooltip>
-            <ButtonPopover tooltipTitle="Search similars">
-              <SearchEngine axieId={axieId} />
-            </ButtonPopover>
-          </>,
-          target
-        );
+          const PortalElem = wrapIntoPortal(
+            <>
+              <Tooltip title="Show genes">
+                <IconButton
+                  aria-label="delete"
+                  onClick={() => freakTableManipulataion(elem)}
+                  size="small"
+                >
+                  <GridOnIcon fontSize="small" style={{ color: "white" }} />
+                </IconButton>
+              </Tooltip>
+              <ButtonPopover tooltipTitle="Search similars">
+                <SearchEngine axieId={axieId} />
+              </ButtonPopover>
+            </>,
+            target
+          );
 
-        return <PortalElem />;
-      })}
+          return <PortalElem />;
+        }
+      )}
     </>
   ) : null;
 };
